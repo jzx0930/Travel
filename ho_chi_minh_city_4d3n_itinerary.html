@@ -73,6 +73,17 @@ footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed
  nav,.btn{display:none}.day,.panel,.quick{break-inside:avoid;box-shadow:none}
  .container{max-width:none;padding:10px}
 }
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:14px}
+.fcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(27,45,38,.04)}
+.fcard .img{height:118px;display:flex;align-items:center;justify-content:center;font-size:2.9rem;position:relative;overflow:hidden}
+.fcard .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fcard .bd{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
+.fcard .nm{font-weight:800;color:var(--green);font-size:1.02rem}
+.fcard .ds{font-size:.85rem;color:var(--muted);margin:4px 0 11px;flex:1}
+.fcard .links{display:flex;gap:8px}
+.fcard .links a{font-size:.8rem;font-weight:700;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid var(--line)}
+.fcard .links .ig{background:#fdeef4;color:#c13584;border-color:#f3cfe0}
+.fcard .links .mp{background:#eaf1ee;color:var(--green2)}
 </style>
 </head>
 <body>
@@ -364,38 +375,74 @@ footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed
   <section id="food" style="margin-top:34px">
     <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">🍜 餐廳</h2>
     <p class="section-intro" style="color:var(--muted);margin:0 0 16px">熱門店常要排隊或預約；點卡片開 Google Maps。</p>
-    <div class="quick-grid" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))">
-      <a class="quick" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pizza+4P%27s+Ho+Chi+Minh">
-        <strong>Pizza 4P's</strong><span>窯烤 pizza＋自製起司，人氣名店，建議先訂位。</span></a>
-      <a class="quick" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Quan+Nem+Ho+Chi+Minh">
-        <strong>Quán Nem</strong><span>越式炸春捲與家常菜，行程已安排的口袋名單。</span></a>
-      <a class="quick" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pho+Le+Ho+Chi+Minh">
-        <strong>Phở Lệ</strong><span>24 小時牛肉河粉名店，湯頭濃厚。</span></a>
-      <a class="quick" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Banh+Mi+Huynh+Hoa">
-        <strong>Bánh Mì Huỳnh Hoa</strong><span>爆料越式法國麵包，排隊也值得。</span></a>
-      <a class="quick" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cuc+Gach+Quan+Ho+Chi+Minh">
-        <strong>Cục Gạch Quán</strong><span>文青老宅越菜，氛圍好拍、適合晚餐。</span></a>
-      <a class="quick" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Quan+An+Ngon+138+Ho+Chi+Minh">
-        <strong>Quán Ăn Ngon</strong><span>庭園式越菜大集合，第一次來很適合一次吃遍。</span></a>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#e68b55,#c4612f)">🍕<img src="images/pizza4ps.jpg" alt="Pizza 4P's" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Pizza 4P's</div><div class="ds">窯烤 pizza＋自製起司，人氣名店，建議先訂位。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/pizza4ps/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pizza+4P%27s+Ho+Chi+Minh">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#8aa36a,#5f7a43)">🌯<img src="images/quannem.jpg" alt="Quán Nem" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Quán Nem</div><div class="ds">越式炸春捲與家常菜，行程已安排的口袋名單。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.google.com/search?q=Quan+Nem+Ho+Chi+Minh+%E4%BB%8B%E7%B4%B9">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Quan+Nem+Ho+Chi+Minh">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#c98a3d,#9c6321)">🍜<img src="images/phole.jpg" alt="Phở Lệ" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Phở Lệ</div><div class="ds">24 小時牛肉河粉名店，湯頭濃厚。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.bring-you.info/zh-hans/pho-le">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pho+Le+Ho+Chi+Minh">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#d6a657,#b07f2c)">🥖<img src="images/banhmi.jpg" alt="Bánh Mì Huỳnh Hoa" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Bánh Mì Huỳnh Hoa</div><div class="ds">爆料越式法國麵包，排隊也值得。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://vietcetera.com/en/banh-mi-huynh-hoa-how-100k-and-35-years-built-a-saigon-icon">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Banh+Mi+Huynh+Hoa">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#6f8f6f,#466246)">🍲<img src="images/cucgach.jpg" alt="Cục Gạch Quán" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Cục Gạch Quán</div><div class="ds">文青老宅越菜，氛圍好拍、適合晚餐。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://guide.michelin.com/tw/zh_TW/ho-chi-minh/ho-chi-minh_2978179/restaurant/cuc-gach-quan">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cuc+Gach+Quan+Ho+Chi+Minh">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#d08a4e,#a65f26)">🍛<img src="images/ngon.jpg" alt="Quán Ăn Ngon" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Quán Ăn Ngon</div><div class="ds">庭園式越菜大集合，第一次來很適合一次吃遍。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.google.com/search?q=Quan+An+Ngon+138+Ho+Chi+Minh+%E4%BB%8B%E7%B4%B9">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Quan+An+Ngon+138+Ho+Chi+Minh">📍 Maps</a></div></div>
+      </div>
     </div>
   </section>
 
   <section id="dessert" style="margin-top:34px">
     <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">🍮 甜點 · 飲品</h2>
     <p class="section-intro" style="color:var(--muted);margin:0 0 16px">越式甜點與咖啡，不少也很好拍。</p>
-    <div class="quick-grid" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))">
-      <a class="quick" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cong+Caphe+Ho+Chi+Minh">
-        <strong>Cộng Caphe</strong><span>招牌椰子咖啡冰沙，復古越共風裝潢，好喝好拍。</span></a>
-      <a class="quick" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Che+Vietnamese+dessert+Ho+Chi+Minh">
-        <strong>越式甜湯 Chè</strong><span>三色冰、綠豆沙等傳統甜湯，街邊到名店都有。</span></a>
-      <a class="quick" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Kem+Bo+avocado+ice+cream+Ho+Chi+Minh">
-        <strong>Kem Bơ（酪梨冰淇淋）</strong><span>越南特色酪梨冰，綿密香濃。</span></a>
-      <a class="quick" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Banh+Flan+Ho+Chi+Minh">
-        <strong>Bánh Flan</strong><span>越式焦糖布丁，常淋咖啡或煉乳，餐後首選。</span></a>
-      <a class="quick" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Workshop+Coffee+Ho+Chi+Minh">
-        <strong>The Workshop</strong><span>老倉庫改裝的精品咖啡，挑高空間好拍。</span></a>
-      <a class="quick" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Fanny+Gelato+Ho+Chi+Minh">
-        <strong>Fanny Gelato</strong><span>手工義式冰淇淋，有越南在地口味。</span></a>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#6b8f78,#3f6150)">🥥☕<img src="images/cong.jpg" alt="Cộng Caphe" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Cộng Caphe</div><div class="ds">招牌椰子咖啡冰沙，復古越共風裝潢，好喝好拍。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://congcaphe.com/">🌐 官網</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cong+Caphe+Ho+Chi+Minh">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#e08aa0,#b65574)">🍧<img src="images/che.jpg" alt="Chè" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">越式甜湯 Chè</div><div class="ds">三色冰、綠豆沙等傳統甜湯，街邊到名店都有。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.google.com/search?q=Che+%E8%B6%8A%E5%BC%8F%E7%94%9C%E6%B9%AF+%E8%83%A1%E5%BF%97%E6%98%8E+%E4%BB%8B%E7%B4%B9">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Che+Vietnamese+dessert+Ho+Chi+Minh">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#9bbb6a,#6f9142)">🥑🍦<img src="images/kembo.jpg" alt="Kem Bơ" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Kem Bơ（酪梨冰淇淋）</div><div class="ds">越南特色酪梨冰，綿密香濃。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.google.com/search?q=Kem+Bo+avocado+ice+cream+Ho+Chi+Minh">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Kem+Bo+avocado+ice+cream+Ho+Chi+Minh">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#dcae63,#b07f2c)">🍮<img src="images/flan.jpg" alt="Bánh Flan" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Bánh Flan</div><div class="ds">越式焦糖布丁，常淋咖啡或煉乳，餐後首選。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.google.com/search?q=Banh+Flan+Ho+Chi+Minh+%E4%BB%8B%E7%B4%B9">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Banh+Flan+Ho+Chi+Minh">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#9c8368,#6e5942)">☕<img src="images/workshop.jpg" alt="The Workshop" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">The Workshop</div><div class="ds">老倉庫改裝的精品咖啡，挑高空間好拍。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.google.com/search?q=The+Workshop+Coffee+Ho+Chi+Minh+instagram">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Workshop+Coffee+Ho+Chi+Minh">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#e39bb4,#c06a8a)">🍨<img src="images/fanny.jpg" alt="Fanny Gelato" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Fanny Gelato</div><div class="ds">手工義式冰淇淋，有越南在地口味。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.google.com/search?q=Fanny+Gelato+Ho+Chi+Minh">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Fanny+Gelato+Ho+Chi+Minh">📍 Maps</a></div></div>
+      </div>
     </div>
   </section>
 
