@@ -80,7 +80,11 @@ footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed
 .fcard .bd{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
 .fcard .nm{font-weight:800;color:var(--green);font-size:1.02rem}
 .fcard .ds{font-size:.85rem;color:var(--muted);margin:4px 0 11px;flex:1}
-.fcard .links{display:flex;gap:8px}
+.fcard .links{display:flex;gap:8px;flex-wrap:wrap}
+.fcard .links a{white-space:nowrap}
+#tonav{position:fixed;right:16px;bottom:18px;z-index:99;display:none;align-items:center;gap:6px;background:var(--green);color:#fff;border:0;border-radius:999px;padding:11px 16px;font-size:.9rem;font-weight:700;box-shadow:0 8px 22px rgba(0,0,0,.25);cursor:pointer;font-family:inherit}
+#tonav.show{display:flex}
+#tonav:hover{background:var(--green2)}
 .fcard .links a{font-size:.8rem;font-weight:700;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid var(--line)}
 .fcard .links .ig{background:#fdeef4;color:#c13584;border-color:#f3cfe0}
 .fcard .credit{font-size:.68rem;color:#9aa39e;margin-top:6px}
@@ -114,20 +118,257 @@ footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed
     每日皆已為您嚴格規劃「越式洗頭」與「全身按摩」各一項，讓每一天都充滿最高享受！人氣餐廳（如 Pizza 4P's、Quán Nem）強烈建議提前線上預約。
   </div>
 
-  <nav aria-label="跳至行程日">
-    <a href="#day1">Day 1 抵達日</a>
-    <a href="#day2">Day 2 文化與潮牌</a>
-    <a href="#day3">Day 3 咖啡與購物</a>
-    <a href="#day4">Day 4 美食回程</a>
+  <nav id="catnav" aria-label="分類與行程">
     <a href="#photospots">📸 拍照點</a>
     <a href="#food">🍜 餐廳</a>
     <a href="#dessert">🍮 甜點</a>
     <a href="#coffee">☕ 越南咖啡</a>
     <a href="#nightlife">🍸 夜晚小酌</a>
     <a href="#shopping">🛒 要購買</a>
+    <a href="#day1">Day 1 抵達日</a>
+    <a href="#day2">Day 2 文化與潮牌</a>
+    <a href="#day3">Day 3 咖啡與購物</a>
+    <a href="#day4">Day 4 美食回程</a>
     <a href="#budget">出發前清單</a>
   </nav>
 
+  <section id="photospots" style="margin-top:34px">
+    <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">📸 更多拍照打卡點</h2>
+    <p class="section-intro" style="color:var(--muted);margin:0 0 16px">避開行程已有的咖啡公寓、粉紅教堂、濱城市場、書街。點 IG 看別人怎麼拍、點 Maps 導航。</p>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#d9b36a,#a67c2e)">🏛️<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ho%20Chi%20Minh%20City%2C%20Central%20Post%20Office%2C%202020-01%20CN-01.jpg?width=700" alt="西貢中央郵局" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">西貢中央郵局</div><div class="ds">紅教堂正對面，法式黃牆建築，順路就拍。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/saigoncentralpostoffice/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Saigon+Central+Post+Office">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#8fa98a,#5c7a58)">🏯<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Independence%20Palace%20Ho%20Chi%20Minh%20city%20%2838647623045%29.jpg?width=700" alt="統一宮（獨立宮）" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">統一宮（獨立宮）</div><div class="ds">復古宮殿＋大草坪，拍穿搭好看。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/independencepalace/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Independence+Palace+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#3f5a8a,#1f2f4d)">🌃<img src="https://commons.wikimedia.org/wiki/Special:FilePath/People%27s%20Committee%20Building%20of%20Ho%20Chi%20Minh%20City%20at%20night%201.jpg?width=700" alt="阮惠步行街 × 市政廳" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">阮惠步行街 × 市政廳</div><div class="ds">夜晚市政廳打燈，寬闊好取景的夜拍地標。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/nguyenhue/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Nguyen+Hue+Walking+Street">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#c98a6a,#8f5a3c)">🎭<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Saigon%20Opera%20House%202014.jpg?width=700" alt="胡志明大劇院" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">胡志明大劇院</div><div class="ds">歐風立面，白天夜晚都美。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/saigonoperahouse/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Saigon+Opera+House">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#c0392b,#7b1d12)">🏮<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Thien%20Hau%20Temple%2C%20Cholon%20%2851208102653%29.jpg?width=700" alt="天后宮（堤岸）" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">天后宮（堤岸）</div><div class="ds">盤香、紅燈籠、廟宇氛圍，IG 很紅的越南味。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/thienhautemple/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Thien+Hau+Temple+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#6c7a89,#36414c)">🏙️<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Landmark%2081%20view%20from%20Saigon%20River.jpg?width=700" alt="Landmark 81 觀景台" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Landmark 81 觀景台</div><div class="ds">想拍城市天際線就上這裡（或 Bitexco）。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/landmark81/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Landmark+81+SkyView">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#9c8368,#6e5942)">☕<img src="images/thiba.jpg" alt="ThiBa Cafe" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">ThiBa Cafe</div><div class="ds">IG 12 景點之一：藏在二樓的復古老宅咖啡（70 Sương Nguyệt Anh, Q1，7:00–22:00）。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/thibacafe/">📷 IG</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/reel/DP8f5-eCWnJ/">📷 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=ThiBa+Cafe+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：IG @thibacafe</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#6b8f78,#3f6150)">🌿<img src="images/ngam.jpg" alt="ngâm CAFE" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">ngâm CAFE</div><div class="ds">12 景點之一：白天喝咖啡、晚上變小酒館（8:30–23:00）。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/cafe.ngam/">📷 IG</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/reel/DP8f5-eCWnJ/">📷 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ngam+Cafe+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：IG @cafe.ngam</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#e39bb4,#c06a8a)">🍰<img src="images/millemille.jpg" alt="Mille Mille" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Mille Mille</div><div class="ds">12 景點之一：網美系咖啡甜點店（32 Trần Cao Vân，8:00–21:30）。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/millemillevn/">📷 IG</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/reel/DP8f5-eCWnJ/">📷 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Mille+Mille+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：IG @millemillevn</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#4a4a4a,#222)">🍻<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Green%20Mill%20Cocktail%20Lounge%20interior.jpg?width=700" alt="The Gangs Central" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">The Gangs Central</div><div class="ds">12 景點之一：工業風餐酒館，晚上氣氛好。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/thegangs/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/reel/DP8f5-eCWnJ/">📷 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Gangs+Central+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons（示意）</div></div>
+      </div>
+    </div>
+    <p class="small" style="margin-top:12px">後 4 點來自 IG @hsiang_food.travel「胡志明市的 12 個景點」：
+      <a href="https://www.instagram.com/reel/DP8f5-eCWnJ/" target="_blank" rel="noopener">📷 看原影片 ↗</a>
+      （其餘：粉紅教堂、咖啡公寓、書街、獨立宮、郵政局、檳城市場、Landmark 81、碧文步行街，行程中已有。）</p>
+  </section>
+
+  <section id="food" style="margin-top:34px">
+    <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">🍜 餐廳</h2>
+    <p class="section-intro" style="color:var(--muted);margin:0 0 16px">熱門店常要排隊或預約；📷 IG 是官方帳號，「IG #」是 hashtag 看網友照片。</p>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#e68b55,#c4612f)">🍕<img src="https://pizza4ps.com/wp-content/uploads/2023/08/2-APPLY-2-Burrata-Parma-Ham-Margherita-2-560x560.jpg" alt="Pizza 4P's" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Pizza 4P's</div><div class="ds">窯烤 pizza＋自製起司，人氣名店，建議先訂位。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/pizza4ps/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pizza+4P%27s+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：pizza4ps.com</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#8aa36a,#5f7a43)">🌯<img src="https://quannem.com.vn/images/nem-cua.jpg" alt="Quán Nem" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Quán Nem</div><div class="ds">越式炸春捲（nem cua bể 蟹肉春捲）與家常菜，行程已安排的口袋名單。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/quannem/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Quan+Nem+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：quannem.com.vn</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#c98a3d,#9c6321)">🍜<img src="https://phole.vn/thumbs/1180x550x1/upload/photo/pho-ngon-quan-3-1751461201.jpg.webp" alt="Phở Lệ" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Phở Lệ</div><div class="ds">24 小時牛肉河粉名店，湯頭濃厚。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/phole/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://www.bring-you.info/zh-hans/pho-le">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pho+Le+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：phole.vn</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#d6a657,#b07f2c)">🥖<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Two%20mini%20banh%20mi%20Vietnamese%20sandwiches.jpg?width=700" alt="Bánh Mì Huỳnh Hoa" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Bánh Mì Huỳnh Hoa</div><div class="ds">爆料越式法國麵包，排隊也值得（26 Lê Thị Riêng）。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/banhmihuynhhoa_saigon_hcmc_89/">📷 IG</a><a class="ig" target="_blank" rel="noopener" href="https://vietcetera.com/en/banh-mi-huynh-hoa-how-100k-and-35-years-built-a-saigon-icon">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Banh+Mi+Huynh+Hoa">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#6f8f6f,#466246)">🍲<img src="https://cucgachquan.com/images/stories/quanque1.jpg" alt="Cục Gạch Quán" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Cục Gạch Quán</div><div class="ds">文青老宅越菜，米其林推薦、適合晚餐。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/cucgachquan/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://guide.michelin.com/tw/zh_TW/ho-chi-minh/ho-chi-minh_2978179/restaurant/cuc-gach-quan">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cuc+Gach+Quan+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：cucgachquan.com</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#d08a4e,#a65f26)">🍛<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vietnamese%20fried%20spring%20rolls%20in%20Ho%20Chi%20Minh%20City%2C%20Vietnam.jpg?width=700" alt="Quán Ăn Ngon" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Quán Ăn Ngon</div><div class="ds">庭園式越菜大集合（米其林入選），第一次來很適合一次吃遍。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/quananngon.restaurant/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Quan+An+Ngon+138+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#b5502f,#7d3017)">🥩🍳<img src="https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A1nh%20m%C3%AC%20%C4%83n%20c%C3%B9ng%20b%C3%B2%20n%C3%A9.jpg?width=700" alt="Bò Né Bà Nũi" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Bò Né Bà Nũi</div><div class="ds">越式鐵板牛排早餐（bò né）：滾燙鐵板上有牛排、荷包蛋、pâté，配越式法國麵包沾著吃。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/bone/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Bo+Ne+Ba+Nui+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#d9842f,#a85a14)">🦀🍜<img src="https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A1nh%20canh%20cua%20%28Vietnamese%20thick%20noodle%20with%20crab%20soup%29.jpg?width=700" alt="蟹肉羹麵 Bánh canh cua" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">蟹肉羹麵 Bánh canh cua</div><div class="ds">在地人才知道的隱藏美食：濃郁蟹湯＋Q 彈麵羹＋滿滿配料，一碗約台幣 67 元。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/reel/DbSkIlzjyEP/">📷 IG 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=banh+canh+cua+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dessert" style="margin-top:34px">
+    <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">🍮 甜點 · 飲品</h2>
+    <p class="section-intro" style="color:var(--muted);margin:0 0 16px">越式甜點與咖啡，不少也很好拍。</p>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#6b8f78,#3f6150)">🥥☕<img src="https://congcaphe.com/_next/static/images/cauchuyencong-e4d70a5d3d0d43b26ae6af4400ecf7ae.jpg" alt="Cộng Caphe" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Cộng Caphe</div><div class="ds">招牌椰子咖啡冰沙，復古越共風裝潢，好喝好拍。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/congcaphe/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cong+Caphe+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：congcaphe.com</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#e08aa0,#b65574)">🍧<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ch%C3%A8%20b%C3%A0%20ba.jpg?width=700" alt="越式甜湯 Chè" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">越式甜湯 Chè</div><div class="ds">三色冰、綠豆沙、chè bà ba 等傳統甜湯，街邊到名店都有。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/chesaigon/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Che+Vietnamese+dessert+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#9bbb6a,#6f9142)">🥑🍦<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Avocado%20Ice%20Cream%2C%20Jun%202024.jpg?width=700" alt="Kem Bơ（酪梨冰淇淋）" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Kem Bơ（酪梨冰淇淋）</div><div class="ds">越南特色酪梨冰，綿密香濃。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/kembo/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Kem+Bo+avocado+ice+cream+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons（示意）</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#dcae63,#b07f2c)">🍮<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Homemade%20Flan.jpg?width=700" alt="Bánh Flan" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Bánh Flan</div><div class="ds">越式焦糖布丁，常淋咖啡或煉乳；西貢特產「椰子殼布丁」也可試。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/flanman.banhflantraidua/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Banh+Flan+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#9c8368,#6e5942)">☕<img src="images/workshop.jpg" alt="The Workshop" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">The Workshop</div><div class="ds">老倉庫改裝的精品咖啡，挑高空間好拍（27 Ngô Đức Kế 2F）。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/theworkshopcoffee/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Workshop+Coffee+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：IG @theworkshopcoffee</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#e39bb4,#c06a8a)">🍨<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cup%20of%20gelato%2C%20Milano.jpg?width=700" alt="Fanny Gelato" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Fanny Gelato</div><div class="ds">手工義式冰淇淋，有越南在地口味。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/fannyicecream/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Fanny+Gelato+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons（示意）</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="coffee" style="margin-top:34px">
+    <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">☕ 越南咖啡（很推薦）</h2>
+    <p class="section-intro" style="color:var(--muted);margin:0 0 16px">越南多用羅布斯塔豆＋法式滴滴壺（phin），風味濃。來越南一定要試幾種招牌喝法。</p>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#6b4a32,#3e2a1a)">🧊☕<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vietnamese%20coffee%20with%20milk%20and%20ice.jpg?width=700" alt="煉乳冰咖啡 Cà phê sữa đá" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">煉乳冰咖啡 Cà phê sữa đá</div><div class="ds">最經典的一杯：濃咖啡＋甜煉乳＋冰塊，街邊到名店都有。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/caphesuada/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://www.vietnamairlines.com/tw/zh-tw/plan-book/travel/travel-guide/best-cafe-in-ho-chi-minh">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=cafe+sua+da+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#6b8f78,#3f6150)">🥥☕<img src="https://congcaphe.com/_next/static/images/cauchuyencong-e4d70a5d3d0d43b26ae6af4400ecf7ae.jpg" alt="椰子咖啡 Cà phê cốt dừa" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">椰子咖啡 Cà phê cốt dừa</div><div class="ds">椰奶冰沙式咖啡，清爽香甜。Cộng Cà Phê 的版本最有名。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/congcaphe/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cong+Caphe+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：congcaphe.com</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#d6a84e,#a87524)">🥚☕<img src="https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%A0%20ph%C3%AA%20tr%E1%BB%A9ng.jpg?width=700" alt="蛋咖啡 Cà phê trứng" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">蛋咖啡 Cà phê trứng</div><div class="ds">蛋黃打發成綿密奶霜蓋在濃咖啡上，像喝得到的提拉米蘇。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/caphetrung/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=egg+coffee+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#8a9bb0,#5a6b82)">🧂☕<img src="https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%A0%20Ph%C3%AA%20Mu%E1%BB%91i%20-%20The%20Big%20Bowl%202024-07-08.jpg?width=700" alt="鹽咖啡 Cà phê muối" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">鹽咖啡 Cà phê muối</div><div class="ds">鹹甜奶蓋配濃咖啡，近年很紅的喝法，順口不膩。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/caphemuoi/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=ca+phe+muoi+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#9c8368,#6e5942)">☕<img src="images/workshop.jpg" alt="The Workshop" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">The Workshop</div><div class="ds">老倉庫改裝的精品咖啡、自家烘焙，想喝「認真的一杯」來這。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/theworkshopcoffee/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Workshop+Coffee+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：IG @theworkshopcoffee</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#b07f2c,#7d5718)">🏢☕<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ho%20Chi%20Minh%20City%2C%20Nguyen%20Hue%20Street%2C%202020-01%20CN-02.jpg?width=700" alt="咖啡公寓 The Café Apartment" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">咖啡公寓 The Café Apartment</div><div class="ds">一整棟老公寓裡數十家風格咖啡廳，邊喝邊拍（阮惠大道 42 號）。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/cafeapartment/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Cafe+Apartment+42+Nguyen+Hue">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nightlife" style="margin-top:34px">
+    <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">🍸 夜晚小酌 · 音樂 · 表演</h2>
+    <p class="section-intro" style="color:var(--muted);margin:0 0 16px">高空酒吧多半有現場音樂與夜景。演出時間／入場費／服裝規定常變動，出發前再查各家 IG。</p>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#2c3e50,#1a252f)">🌆<img src="https://chillsaigon.com/assets/uploads/2023/08/ODO7775-1024x683.jpg" alt="Chill SkyBar" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Chill SkyBar</div><div class="ds">AB Tower 26F・360° 夜景＋DJ／live 音樂，最常被推薦。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/chill_skybar/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Chill+Skybar+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：chillsaigon.com</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#7d3c98,#4a235a)">🎷<img src="https://www.caravellehotel.com/wp-content/uploads/Saigon-Saigon-Bar-1.jpg" alt="Saigon Saigon Rooftop" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Saigon Saigon Rooftop</div><div class="ds">Caravelle 飯店・幾乎每晚現場音樂＋夕陽。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/saigonsaigonbar/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Saigon+Saigon+Rooftop+Bar+Caravelle">📍 Maps</a></div><div class="credit">圖：caravellehotel.com</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#1f618d,#0e3a5a)">🎧<img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/92/2024/09/13035519/Social-Club-Rooftop-Bar-1-min-923x615.jpg" alt="Social Club" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Social Club</div><div class="ds">Hotel des Arts 23–24F・live DJ、全景露台，穿著較隨性。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/socialclubsaigon/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Social+Club+Rooftop+Hotel+des+Arts+Saigon">📍 Maps</a></div><div class="credit">圖：hoteldesartssaigon.com</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#b9770e,#7e5109)">🌇<img src="https://lasiestahotels.com/saigon/wp-content/uploads/2022/09/Twilight-Sky-Bar_6_Opt_2_R2-2000.jpg" alt="Twilight Sky Bar" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Twilight Sky Bar</div><div class="ds">La Siesta Premium・頂樓常有樂團現場。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/twilightskybar/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Twilight+Sky+Bar+La+Siesta+Saigon">📍 Maps</a></div><div class="credit">圖：lasiestahotels.com</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#c0392b,#7b1d12)">🎉<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bui%20Vien%20Walking%20Street%201.jpg?width=700" alt="范五老街（Bùi Viện）" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">范五老街（Bùi Viện）</div><div class="ds">背包客派對街，整排酒吧與現場樂團。財物收好。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/buivien/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Bui+Vien+Walking+Street">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#d4ac0d,#9a7d0a)">🍺<img src="https://pasteurstreet.com/wp-content/uploads/pasteurstreet-banner-01.jpg" alt="精釀啤酒" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">精釀啤酒</div><div class="ds">Pasteur Street Brewing、Heart of Darkness、Rogue Saigon。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/pasteurstreetcraftbeer/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pasteur+Street+Brewing+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：pasteurstreet.com</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shopping" style="margin-top:34px">
+    <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">🛒 要購買</h2>
+    <p class="section-intro" style="color:var(--muted);margin:0 0 16px">在越南順便採買的清單。</p>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#e7ebf2,#c7cfdc)"><img src="images/dermatix.png" alt="Dermatix Ultra 疤痕凝膠" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">Dermatix Ultra 疤痕凝膠</div><div class="ds">矽膠疤痕護理凝膠（Advanced Scar Formula, 15g），越南藥局常見、價格較台灣實惠。</div>
+          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.google.com/search?q=Dermatix+Ultra+scar+gel+Vietnam">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pharmacity+Ho+Chi+Minh">📍 哪裡買</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#7a4a8a,#4e2d5c)">🫐🍇<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mangosteens%20-%20whole%20and%20opened.jpg?width=700" alt="當地水果" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">當地水果</div><div class="ds">當地水果好吃又便宜：山竹、葡萄、紅毛丹、榴槤、釋迦等，市場或超市都買得到。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=fruit+market+Ho+Chi+Minh">📍 市場</a></div><div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 每日行程 -->
   <!-- DAY 1 -->
   <section class="day" id="day1">
     <div class="day-head">
@@ -356,241 +597,6 @@ footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed
     </div>
   </section>
 
-  <section id="photospots" style="margin-top:34px">
-    <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">📸 更多拍照打卡點</h2>
-    <p class="section-intro" style="color:var(--muted);margin:0 0 16px">避開行程已有的咖啡公寓、粉紅教堂、濱城市場、書街。點 IG 看別人怎麼拍、點 Maps 導航。</p>
-    <div class="fgrid">
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#d9b36a,#a67c2e)">🏛️<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ho%20Chi%20Minh%20City%2C%20Central%20Post%20Office%2C%202020-01%20CN-01.jpg?width=700" alt="西貢中央郵局" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">西貢中央郵局</div><div class="ds">紅教堂正對面，法式黃牆建築，順路就拍。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/saigoncentralpostoffice/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Saigon+Central+Post+Office">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#8fa98a,#5c7a58)">🏯<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Independence%20Palace%20Ho%20Chi%20Minh%20city%20%2838647623045%29.jpg?width=700" alt="統一宮（獨立宮）" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">統一宮（獨立宮）</div><div class="ds">復古宮殿＋大草坪，拍穿搭好看。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/independencepalace/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Independence+Palace+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#3f5a8a,#1f2f4d)">🌃<img src="https://commons.wikimedia.org/wiki/Special:FilePath/People%27s%20Committee%20Building%20of%20Ho%20Chi%20Minh%20City%20at%20night%201.jpg?width=700" alt="阮惠步行街 × 市政廳" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">阮惠步行街 × 市政廳</div><div class="ds">夜晚市政廳打燈，寬闊好取景的夜拍地標。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/nguyenhue/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Nguyen+Hue+Walking+Street">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#c98a6a,#8f5a3c)">🎭<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Saigon%20Opera%20House%202014.jpg?width=700" alt="胡志明大劇院" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">胡志明大劇院</div><div class="ds">歐風立面，白天夜晚都美。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/saigonoperahouse/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Saigon+Opera+House">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#c0392b,#7b1d12)">🏮<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Thien%20Hau%20Temple%2C%20Cholon%20%2851208102653%29.jpg?width=700" alt="天后宮（堤岸）" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">天后宮（堤岸）</div><div class="ds">盤香、紅燈籠、廟宇氛圍，IG 很紅的越南味。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/thienhautemple/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Thien+Hau+Temple+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#6c7a89,#36414c)">🏙️<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Landmark%2081%20view%20from%20Saigon%20River.jpg?width=700" alt="Landmark 81 觀景台" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Landmark 81 觀景台</div><div class="ds">想拍城市天際線就上這裡（或 Bitexco）。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/landmark81/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Landmark+81+SkyView">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#9c8368,#6e5942)">☕</div>
-        <div class="bd"><div class="nm">ThiBa Cafe</div><div class="ds">IG 12 景點之一：藏在二樓的復古老宅咖啡（70 Sương Nguyệt Anh, Q1，7:00–22:00）。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/thibacafe/">📷 IG</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/reel/DP8f5-eCWnJ/">📷 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=ThiBa+Cafe+Ho+Chi+Minh">📍 Maps</a></div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#6b8f78,#3f6150)">🌿</div>
-        <div class="bd"><div class="nm">ngâm CAFE</div><div class="ds">12 景點之一：白天喝咖啡、晚上變小酒館（8:30–23:00）。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/cafe.ngam/">📷 IG</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/reel/DP8f5-eCWnJ/">📷 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ngam+Cafe+Ho+Chi+Minh">📍 Maps</a></div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#e39bb4,#c06a8a)">🍰</div>
-        <div class="bd"><div class="nm">Mille Mille</div><div class="ds">12 景點之一：網美系咖啡甜點店（32 Trần Cao Vân，8:00–21:30）。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/millemillevn/">📷 IG</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/reel/DP8f5-eCWnJ/">📷 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Mille+Mille+Ho+Chi+Minh">📍 Maps</a></div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#4a4a4a,#222)">🍻</div>
-        <div class="bd"><div class="nm">The Gangs Central</div><div class="ds">12 景點之一：工業風餐酒館，晚上氣氛好。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/thegangs/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/reel/DP8f5-eCWnJ/">📷 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Gangs+Central+Ho+Chi+Minh">📍 Maps</a></div></div>
-      </div>
-    </div>
-    <p class="small" style="margin-top:12px">後 4 點來自 IG @hsiang_food.travel「胡志明市的 12 個景點」：
-      <a href="https://www.instagram.com/reel/DP8f5-eCWnJ/" target="_blank" rel="noopener">📷 看原影片 ↗</a>
-      （其餘：粉紅教堂、咖啡公寓、書街、獨立宮、郵政局、檳城市場、Landmark 81、碧文步行街，行程中已有。）</p>
-  </section>
-
-  <section id="food" style="margin-top:34px">
-    <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">🍜 餐廳</h2>
-    <p class="section-intro" style="color:var(--muted);margin:0 0 16px">熱門店常要排隊或預約；📷 IG 是官方帳號，「IG #」是 hashtag 看網友照片。</p>
-    <div class="fgrid">
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#e68b55,#c4612f)">🍕<img src="https://pizza4ps.com/wp-content/uploads/2023/08/2-APPLY-2-Burrata-Parma-Ham-Margherita-2-560x560.jpg" alt="Pizza 4P's" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Pizza 4P's</div><div class="ds">窯烤 pizza＋自製起司，人氣名店，建議先訂位。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/pizza4ps/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pizza+4P%27s+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：pizza4ps.com</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#8aa36a,#5f7a43)">🌯<img src="https://quannem.com.vn/images/nem-cua.jpg" alt="Quán Nem" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Quán Nem</div><div class="ds">越式炸春捲（nem cua bể 蟹肉春捲）與家常菜，行程已安排的口袋名單。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/quannem/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Quan+Nem+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：quannem.com.vn</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#c98a3d,#9c6321)">🍜<img src="https://phole.vn/thumbs/1180x550x1/upload/photo/pho-ngon-quan-3-1751461201.jpg.webp" alt="Phở Lệ" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Phở Lệ</div><div class="ds">24 小時牛肉河粉名店，湯頭濃厚。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/phole/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://www.bring-you.info/zh-hans/pho-le">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pho+Le+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：phole.vn</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#d6a657,#b07f2c)">🥖<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Two%20mini%20banh%20mi%20Vietnamese%20sandwiches.jpg?width=700" alt="Bánh Mì Huỳnh Hoa" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Bánh Mì Huỳnh Hoa</div><div class="ds">爆料越式法國麵包，排隊也值得（26 Lê Thị Riêng）。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/banhmihuynhhoa_saigon_hcmc_89/">📷 IG</a><a class="ig" target="_blank" rel="noopener" href="https://vietcetera.com/en/banh-mi-huynh-hoa-how-100k-and-35-years-built-a-saigon-icon">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Banh+Mi+Huynh+Hoa">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#6f8f6f,#466246)">🍲<img src="https://cucgachquan.com/images/stories/quanque1.jpg" alt="Cục Gạch Quán" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Cục Gạch Quán</div><div class="ds">文青老宅越菜，米其林推薦、適合晚餐。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/cucgachquan/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://guide.michelin.com/tw/zh_TW/ho-chi-minh/ho-chi-minh_2978179/restaurant/cuc-gach-quan">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cuc+Gach+Quan+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：cucgachquan.com</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#d08a4e,#a65f26)">🍛<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vietnamese%20fried%20spring%20rolls%20in%20Ho%20Chi%20Minh%20City%2C%20Vietnam.jpg?width=700" alt="Quán Ăn Ngon" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Quán Ăn Ngon</div><div class="ds">庭園式越菜大集合（米其林入選），第一次來很適合一次吃遍。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/quananngon.restaurant/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Quan+An+Ngon+138+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#b5502f,#7d3017)">🥩🍳<img src="https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A1nh%20m%C3%AC%20%C4%83n%20c%C3%B9ng%20b%C3%B2%20n%C3%A9.jpg?width=700" alt="Bò Né Bà Nũi" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Bò Né Bà Nũi</div><div class="ds">越式鐵板牛排早餐（bò né）：滾燙鐵板上有牛排、荷包蛋、pâté，配越式法國麵包沾著吃。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/bone/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Bo+Ne+Ba+Nui+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#d9842f,#a85a14)">🦀🍜<img src="https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A1nh%20canh%20cua%20%28Vietnamese%20thick%20noodle%20with%20crab%20soup%29.jpg?width=700" alt="蟹肉羹麵 Bánh canh cua" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">蟹肉羹麵 Bánh canh cua</div><div class="ds">在地人才知道的隱藏美食：濃郁蟹湯＋Q 彈麵羹＋滿滿配料，一碗約台幣 67 元。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/reel/DbSkIlzjyEP/">📷 IG 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=banh+canh+cua+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="dessert" style="margin-top:34px">
-    <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">🍮 甜點 · 飲品</h2>
-    <p class="section-intro" style="color:var(--muted);margin:0 0 16px">越式甜點與咖啡，不少也很好拍。</p>
-    <div class="fgrid">
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#6b8f78,#3f6150)">🥥☕<img src="https://congcaphe.com/_next/static/images/cauchuyencong-e4d70a5d3d0d43b26ae6af4400ecf7ae.jpg" alt="Cộng Caphe" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Cộng Caphe</div><div class="ds">招牌椰子咖啡冰沙，復古越共風裝潢，好喝好拍。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/congcaphe/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cong+Caphe+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：congcaphe.com</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#e08aa0,#b65574)">🍧<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ch%C3%A8%20b%C3%A0%20ba.jpg?width=700" alt="越式甜湯 Chè" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">越式甜湯 Chè</div><div class="ds">三色冰、綠豆沙、chè bà ba 等傳統甜湯，街邊到名店都有。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/chesaigon/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Che+Vietnamese+dessert+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#9bbb6a,#6f9142)">🥑🍦</div>
-        <div class="bd"><div class="nm">Kem Bơ（酪梨冰淇淋）</div><div class="ds">越南特色酪梨冰，綿密香濃。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/kembo/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Kem+Bo+avocado+ice+cream+Ho+Chi+Minh">📍 Maps</a></div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#dcae63,#b07f2c)">🍮<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Homemade%20Flan.jpg?width=700" alt="Bánh Flan" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Bánh Flan</div><div class="ds">越式焦糖布丁，常淋咖啡或煉乳；西貢特產「椰子殼布丁」也可試。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/flanman.banhflantraidua/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Banh+Flan+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#9c8368,#6e5942)">☕</div>
-        <div class="bd"><div class="nm">The Workshop</div><div class="ds">老倉庫改裝的精品咖啡，挑高空間好拍（27 Ngô Đức Kế 2F）。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/theworkshopcoffee/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Workshop+Coffee+Ho+Chi+Minh">📍 Maps</a></div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#e39bb4,#c06a8a)">🍨</div>
-        <div class="bd"><div class="nm">Fanny Gelato</div><div class="ds">手工義式冰淇淋，有越南在地口味。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/fannyicecream/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Fanny+Gelato+Ho+Chi+Minh">📍 Maps</a></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="coffee" style="margin-top:34px">
-    <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">☕ 越南咖啡（很推薦）</h2>
-    <p class="section-intro" style="color:var(--muted);margin:0 0 16px">越南多用羅布斯塔豆＋法式滴滴壺（phin），風味濃。來越南一定要試幾種招牌喝法。</p>
-    <div class="fgrid">
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#6b4a32,#3e2a1a)">🧊☕<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vietnamese%20coffee%20with%20milk%20and%20ice.jpg?width=700" alt="煉乳冰咖啡 Cà phê sữa đá" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">煉乳冰咖啡 Cà phê sữa đá</div><div class="ds">最經典的一杯：濃咖啡＋甜煉乳＋冰塊，街邊到名店都有。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/caphesuada/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://www.vietnamairlines.com/tw/zh-tw/plan-book/travel/travel-guide/best-cafe-in-ho-chi-minh">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=cafe+sua+da+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#6b8f78,#3f6150)">🥥☕<img src="https://congcaphe.com/_next/static/images/cauchuyencong-e4d70a5d3d0d43b26ae6af4400ecf7ae.jpg" alt="椰子咖啡 Cà phê cốt dừa" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">椰子咖啡 Cà phê cốt dừa</div><div class="ds">椰奶冰沙式咖啡，清爽香甜。Cộng Cà Phê 的版本最有名。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/congcaphe/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cong+Caphe+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：congcaphe.com</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#d6a84e,#a87524)">🥚☕<img src="https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%A0%20ph%C3%AA%20tr%E1%BB%A9ng.jpg?width=700" alt="蛋咖啡 Cà phê trứng" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">蛋咖啡 Cà phê trứng</div><div class="ds">蛋黃打發成綿密奶霜蓋在濃咖啡上，像喝得到的提拉米蘇。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/caphetrung/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=egg+coffee+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#8a9bb0,#5a6b82)">🧂☕<img src="https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%A0%20Ph%C3%AA%20Mu%E1%BB%91i%20-%20The%20Big%20Bowl%202024-07-08.jpg?width=700" alt="鹽咖啡 Cà phê muối" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">鹽咖啡 Cà phê muối</div><div class="ds">鹹甜奶蓋配濃咖啡，近年很紅的喝法，順口不膩。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/caphemuoi/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=ca+phe+muoi+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#9c8368,#6e5942)">☕</div>
-        <div class="bd"><div class="nm">The Workshop</div><div class="ds">老倉庫改裝的精品咖啡、自家烘焙，想喝「認真的一杯」來這。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/theworkshopcoffee/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Workshop+Coffee+Ho+Chi+Minh">📍 Maps</a></div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#b07f2c,#7d5718)">🏢☕<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ho%20Chi%20Minh%20City%2C%20Nguyen%20Hue%20Street%2C%202020-01%20CN-02.jpg?width=700" alt="咖啡公寓 The Café Apartment" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">咖啡公寓 The Café Apartment</div><div class="ds">一整棟老公寓裡數十家風格咖啡廳，邊喝邊拍（阮惠大道 42 號）。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/cafeapartment/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Cafe+Apartment+42+Nguyen+Hue">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="nightlife" style="margin-top:34px">
-    <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">🍸 夜晚小酌 · 音樂 · 表演</h2>
-    <p class="section-intro" style="color:var(--muted);margin:0 0 16px">高空酒吧多半有現場音樂與夜景。演出時間／入場費／服裝規定常變動，出發前再查各家 IG。</p>
-    <div class="fgrid">
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#2c3e50,#1a252f)">🌆<img src="https://chillsaigon.com/assets/uploads/2023/08/ODO7775-1024x683.jpg" alt="Chill SkyBar" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Chill SkyBar</div><div class="ds">AB Tower 26F・360° 夜景＋DJ／live 音樂，最常被推薦。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/chill_skybar/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Chill+Skybar+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：chillsaigon.com</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#7d3c98,#4a235a)">🎷<img src="https://www.caravellehotel.com/wp-content/uploads/Saigon-Saigon-Bar-1.jpg" alt="Saigon Saigon Rooftop" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Saigon Saigon Rooftop</div><div class="ds">Caravelle 飯店・幾乎每晚現場音樂＋夕陽。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/saigonsaigonbar/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Saigon+Saigon+Rooftop+Bar+Caravelle">📍 Maps</a></div><div class="credit">圖：caravellehotel.com</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#1f618d,#0e3a5a)">🎧<img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/92/2024/09/13035519/Social-Club-Rooftop-Bar-1-min-923x615.jpg" alt="Social Club" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Social Club</div><div class="ds">Hotel des Arts 23–24F・live DJ、全景露台，穿著較隨性。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/socialclubsaigon/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Social+Club+Rooftop+Hotel+des+Arts+Saigon">📍 Maps</a></div><div class="credit">圖：hoteldesartssaigon.com</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#b9770e,#7e5109)">🌇<img src="https://lasiestahotels.com/saigon/wp-content/uploads/2022/09/Twilight-Sky-Bar_6_Opt_2_R2-2000.jpg" alt="Twilight Sky Bar" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Twilight Sky Bar</div><div class="ds">La Siesta Premium・頂樓常有樂團現場。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/twilightskybar/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Twilight+Sky+Bar+La+Siesta+Saigon">📍 Maps</a></div><div class="credit">圖：lasiestahotels.com</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#c0392b,#7b1d12)">🎉<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bui%20Vien%20Walking%20Street%201.jpg?width=700" alt="范五老街（Bùi Viện）" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">范五老街（Bùi Viện）</div><div class="ds">背包客派對街，整排酒吧與現場樂團。財物收好。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/buivien/">📷 IG #</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Bui+Vien+Walking+Street">📍 Maps</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#d4ac0d,#9a7d0a)">🍺<img src="https://pasteurstreet.com/wp-content/uploads/pasteurstreet-banner-01.jpg" alt="精釀啤酒" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">精釀啤酒</div><div class="ds">Pasteur Street Brewing、Heart of Darkness、Rogue Saigon。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/pasteurstreetcraftbeer/">📷 IG</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pasteur+Street+Brewing+Ho+Chi+Minh">📍 Maps</a></div><div class="credit">圖：pasteurstreet.com</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="shopping" style="margin-top:34px">
-    <h2 style="font-size:1.7rem;color:var(--green);margin:0 0 6px">🛒 要購買</h2>
-    <p class="section-intro" style="color:var(--muted);margin:0 0 16px">在越南順便採買的清單。</p>
-    <div class="fgrid">
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#e7ebf2,#c7cfdc)"><img src="images/dermatix.png" alt="Dermatix Ultra 疤痕凝膠" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">Dermatix Ultra 疤痕凝膠</div><div class="ds">矽膠疤痕護理凝膠（Advanced Scar Formula, 15g），越南藥局常見、價格較台灣實惠。</div>
-          <div class="links"><a class="ig" target="_blank" rel="noopener" href="https://www.google.com/search?q=Dermatix+Ultra+scar+gel+Vietnam">📖 介紹</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pharmacity+Ho+Chi+Minh">📍 哪裡買</a></div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#7a4a8a,#4e2d5c)">🫐🍇<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mangosteens%20-%20whole%20and%20opened.jpg?width=700" alt="當地水果" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
-        <div class="bd"><div class="nm">當地水果</div><div class="ds">當地水果好吃又便宜：山竹、葡萄、紅毛丹、榴槤、釋迦等，市場或超市都買得到。</div>
-          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=fruit+market+Ho+Chi+Minh">📍 市場</a></div><div class="credit">圖：Wikimedia Commons</div></div>
-      </div>
-    </div>
-  </section>
-
   <div class="notice">
     <strong>🚕 旅遊安全小叮嚀</strong>
     搭乘 Grab 請核對車牌；走路時手機請收好以防飛車搶奪；熱門餐廳（Pizza 4P's、Huỳnh Hoa）排隊或用餐人潮較多，請注意隨身財物。祝您旅途愉快！
@@ -600,5 +606,15 @@ footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed
   <div>HO CHI MINH CITY · 17–20 OCT 2026</div>
   <div>祝旅途順利、吃得開心、洗頭按好按滿！</div>
 </footer>
+<button id="tonav" type="button" aria-label="回到分類選單">☰ 回到分類</button>
+<script>
+(function(){
+  var nav=document.getElementById('catnav'), btn=document.getElementById('tonav');
+  if(!nav||!btn) return;
+  function chk(){ var navBottom=nav.getBoundingClientRect().bottom; btn.classList.toggle('show', navBottom < 0); }
+  window.addEventListener('scroll', chk, {passive:true}); chk();
+  btn.addEventListener('click', function(){ nav.scrollIntoView({behavior:'smooth', block:'start'}); });
+})();
+</script>
 </body>
 </html>
