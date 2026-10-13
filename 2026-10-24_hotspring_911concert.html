@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#153c35">
+<title>玖壹壹演唱會＋溫泉 2 天 1 夜｜10/24–10/25</title>
+<style>
+:root{
+  --green:#153c35; --green2:#245b4f; --cream:#f7f3eb; --paper:#fffdf8;
+  --orange:#e68b55; --ink:#24332f; --muted:#66736e; --line:#e5e0d6; --ig:#e1306c;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.65}
+a{color:var(--green2);text-underline-offset:3px}
+.hero{background:linear-gradient(125deg,rgba(15,49,43,.94),rgba(31,89,74,.83)),radial-gradient(circle at 80% 10%,#e6a36a,transparent 35%);color:white;padding:52px 22px 42px}
+.hero-inner,.container{max-width:1050px;margin:auto}
+.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:#f1c59e;font-weight:700}
+h1{font-size:clamp(2rem,5vw,3.8rem);line-height:1.13;margin:.55rem 0 1rem}
+.hero p{max-width:680px;color:#e9f0ec;margin:0}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.pill{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 12px;font-size:.9rem;background:rgba(255,255,255,.08)}
+.container{padding:24px 18px 60px}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:-1px}
+.quick{background:var(--paper);padding:17px;border:1px solid var(--line);border-radius:16px}
+.quick strong{display:block;color:var(--green);font-size:1.08rem}
+.quick span{font-size:.9rem;color:var(--muted)}
+.notice{margin:20px 0;padding:16px 18px;background:#fff2e7;border-left:4px solid var(--orange);border-radius:10px}
+.notice strong{display:block;margin-bottom:4px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+nav a{background:var(--green);color:white;text-decoration:none;padding:9px 14px;border-radius:999px;font-size:.92rem}
+h2{font-size:1.7rem;color:var(--green);margin:0 0 8px}
+.section-intro{color:var(--muted);margin:0 0 20px}
+.day{margin:30px 0;background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 6px 20px rgba(27,45,38,.04)}
+.day-head{padding:22px 24px;background:#e9eee8;border-bottom:1px solid var(--line)}
+.day-head .date{font-size:.82rem;color:var(--green2);font-weight:800;letter-spacing:.08em}
+.day-head h2{margin:4px 0}
+.day-head p{margin:0;color:var(--muted)}
+.timeline{padding:8px 24px 22px}
+.event{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.event:last-child{border-bottom:0}
+.time{font-weight:800;color:var(--green2);font-variant-numeric:tabular-nums}
+.event h3{margin:0 0 5px;font-size:1.08rem}
+.event p{margin:0;color:#4d5a55}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.tag{font-size:.78rem;padding:3px 9px;background:#edf2ed;color:var(--green2);border-radius:999px}
+.btn-group{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.btn{display:inline-block;padding:6px 12px;background:var(--green);color:white;text-decoration:none;border-radius:8px;font-size:.85rem;font-weight:500}
+.btn-ig{background:var(--ig)}
+.columns{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:18px}
+.panel h2{font-size:1.35rem}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{text-align:left;padding:11px 8px;border-bottom:1px solid var(--line)}
+th{color:var(--green);font-size:.9rem}
+td:last-child,th:last-child{text-align:right;white-space:nowrap}
+.total td{font-weight:800;color:var(--green);border-bottom:0}
+.checklist label{display:flex;gap:10px;align-items:flex-start;margin:10px 0}
+input[type=checkbox]{margin-top:6px;accent-color:var(--green);width:17px;height:17px;flex-shrink:0}
+.small{font-size:.88rem;color:var(--muted)}
+footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed;font-size:.9rem}
+@media(max-width:700px){
+ .quick-grid{grid-template-columns:1fr}
+ .event{grid-template-columns:1fr;gap:3px;padding:15px 0}
+ .columns{grid-template-columns:1fr}
+ .timeline{padding:6px 18px 16px}
+ .day-head{padding:20px 18px}
+ .hero{padding-top:38px}
+}
+@media print{
+ body{background:white}.hero{padding:24px;background:#153c35!important;print-color-adjust:exact}
+ nav,.btn{display:none}.day,.panel,.quick{break-inside:avoid;box-shadow:none}
+ .container{max-width:none;padding:10px}
+}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:14px}
+.fcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(27,45,38,.04)}
+.fcard .img{height:118px;display:flex;align-items:center;justify-content:center;font-size:2.9rem;position:relative;overflow:hidden}
+.fcard .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fcard .bd{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
+.fcard .nm{font-weight:800;color:var(--green);font-size:1.02rem}
+.fcard .ds{font-size:.85rem;color:var(--muted);margin:4px 0 11px;flex:1}
+.fcard .links{display:flex;gap:8px;flex-wrap:wrap}
+.fcard .links a{white-space:nowrap}
+#tonav{position:fixed;right:16px;bottom:18px;z-index:99;display:none;align-items:center;gap:6px;background:var(--green);color:#fff;border:0;border-radius:999px;padding:11px 16px;font-size:.9rem;font-weight:700;box-shadow:0 8px 22px rgba(0,0,0,.25);cursor:pointer;font-family:inherit}
+#tonav.show{display:flex}
+#tonav:hover{background:var(--green2)}
+.fcard .links a{font-size:.8rem;font-weight:700;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid var(--line)}
+.fcard .links .ig{background:#fdeef4;color:#c13584;border-color:#f3cfe0}
+.fcard .credit{font-size:.68rem;color:#9aa39e;margin-top:6px}
+.fcard .links .mp{background:#eaf1ee;color:var(--green2)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">TAIWAN · HOT SPRING WEEKEND</div>
+    <h1>玖壹壹演唱會<br>＋ 溫泉 2 天 1 夜</h1>
+    <p>10/24（六）下午先到新莊運動公園陽光草坪看玖壹壹（16:30–17:00），散場後直接自駕上溫泉區泡湯過夜；10/25（日）晨湯、周邊景點，慢慢回家。</p>
+    <div class="meta">
+      <span class="pill">📅 2026/10/24（六）– 10/25（日）</span>
+      <span class="pill">🚗 自駕</span>
+      <span class="pill">🎤 玖壹壹 16:30–17:00</span>
+      <span class="pill">♨️ 溫泉區待定</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="quick-grid" aria-label="行程摘要">
+    <div class="quick"><strong>Day 1 演唱會 → 泡湯</strong><span>新莊午餐、陽光草坪看玖壹壹、傍晚開車上山、晚餐＋夜湯</span></div>
+    <div class="quick"><strong>Day 2 晨湯 → 景點</strong><span>早餐、晨湯、退房、溫泉區周邊走走、回程</span></div>
+    <div class="quick"><strong>溫泉區三選一</strong><span>北投／烏來／礁溪，下方比較後決定</span></div>
+  </section>
+
+  <div class="notice">
+    <strong>⚠️ 先確認兩件事</strong>
+    1）玖壹壹場次請以主辦單位公告為準（免費戶外活動通常會提早佔位）。2）溫泉飯店週六晚通常客滿，決定區域後盡快訂房。
+  </div>
+
+  <nav id="catnav" aria-label="分類與行程">
+    <a href="#spring">♨️ 溫泉區比較</a>
+    <a href="#food">🍜 吃什麼</a>
+    <a href="#day1">Day 1 演唱會＋泡湯</a>
+    <a href="#day2">Day 2 晨湯＋景點</a>
+    <a href="#checklist">出發前清單</a>
+  </nav>
+
+  <section id="spring" style="margin-top:34px">
+    <h2>♨️ 溫泉區三選一</h2>
+    <p class="section-intro">以 17:30 從新莊運動公園出發計算車程（週六傍晚可能塞車，再加 20–30 分）。</p>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#6b8f78,#3f6150)"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Thermal%20Valley%20in%20Beitou.jpg?width=700" alt="北投地熱谷" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">北投・陽明山</div><div class="ds">🚗 約 40 分，最近最省事。白磺／青磺泉，溫泉博物館、地熱谷、北投圖書館都在走路範圍；想安靜一點往陽明山、金山萬里。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=新莊運動公園&destination=北投溫泉博物館">🚗 路線</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/北投溫泉/">📷 IG #</a></div>
+          <div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#8aa36a,#5f7a43)"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wulai%20Waterfall%2001.jpg?width=700" alt="烏來瀑布" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">烏來</div><div class="ds">🚗 約 60 分。無色無味碳酸氫鈉泉（美人湯），山景露天池多；隔天逛烏來老街、台車、瀑布，回程順路新店碧潭。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=新莊運動公園&destination=烏來老街">🚗 路線</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/烏來溫泉/">📷 IG #</a></div>
+          <div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#c98a3d,#9c6321)"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E7%A4%81%E6%BA%AA%E6%A3%AE%E6%9E%97%E9%A2%A8%E5%91%8201.jpg?width=700" alt="礁溪湯圍溝公園" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">礁溪</div><div class="ds">🚗 約 70–90 分（國5 週六傍晚易塞）。溫泉飯店選擇最多、房內湯普遍；隔天湯圍溝公園、幾米、羅東夜市、宜蘭美食。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=新莊運動公園&destination=礁溪湯圍溝溫泉公園">🚗 路線</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/礁溪溫泉/">📷 IG #</a></div>
+          <div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+    </div>
+    <p class="small" style="margin-top:12px">決定後告訴我要哪一區，我再把 Day 1 晚上與 Day 2 的景點、餐廳換成該區的實際店家與訂房連結。</p>
+  </section>
+
+  <section id="food" style="margin-top:34px">
+    <h2>🍜 吃什麼</h2>
+    <p class="section-intro">演唱會前後在新莊解決，溫泉區晚餐依選擇的區域再補。</p>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#d6a657,#b07f2c)">🍜</div>
+        <div class="bd"><div class="nm">新莊廟街（午餐）</div><div class="ds">新莊老街小吃：阿瑞官粿店、新莊廟街麵線、鹹湯圓，離運動公園車程 10 分。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=新莊廟街">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#e68b55,#c4612f)">🧋</div>
+        <div class="bd"><div class="nm">宏匯廣場（午餐／補給）</div><div class="ds">運動公園旁的百貨，美食街＋咖啡，演唱會前買水和點心最方便。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=宏匯廣場">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#6f8f6f,#466246)">🍲</div>
+        <div class="bd"><div class="nm">溫泉區晚餐（待補）</div><div class="ds">北投：滿來溫泉拉麵／陽明山土雞城；烏來：老街山產、泰雅料理；礁溪：甕窯雞、宜蘭櫻桃鴨。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=溫泉+餐廳">📍 Maps</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 1 -->
+  <section class="day" id="day1">
+    <div class="day-head">
+      <div class="date">DAY 01 · 10/24（六）</div>
+      <h2>新莊午餐・玖壹壹演唱會・開車上溫泉區・晚餐＋夜湯</h2>
+      <p>路線：出發 → 新莊廟街午餐 → 新莊運動公園停車 → 陽光草坪佔位 → 玖壹壹 16:30–17:00 → 開車前往溫泉區 → 飯店入住 → 晚餐 → 泡湯</p>
+    </div>
+    <div class="timeline">
+      <article class="event">
+        <div class="time">11:30–12:45</div>
+        <div><h3>午餐：新莊廟街小吃</h3><p>先吃飽再進場，草坪區通常沒有太多正餐選擇。</p><div class="btn-group"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=新莊廟街" target="_blank" rel="noopener">📍 新莊廟街 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">13:00–13:30</div>
+        <div><h3>新莊運動公園停車</h3><p>新莊體育場／新北市立新莊田徑場周邊停車場，活動日車多，建議 13:30 前到；或停宏匯廣場走過去。</p><div class="btn-group"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=新莊運動公園停車場" target="_blank" rel="noopener">📍 停車場 ↗</a><a class="btn" href="https://www.google.com/maps/search/?api=1&query=宏匯廣場停車場" target="_blank" rel="noopener">📍 宏匯停車 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">13:30–16:30</div>
+        <div><h3>陽光草坪佔位、看前面的表演</h3><p>帶野餐墊、帽子、防曬、水；草坪沒遮蔭。先逛逛攤位、看前面卡司。</p><div class="tags"><span class="tag">野餐墊</span><span class="tag">防曬</span><span class="tag">行動電源</span></div><div class="btn-group"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=新莊運動公園陽光草坪" target="_blank" rel="noopener">📍 陽光草坪 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">16:30–17:00</div>
+        <div><h3>🎤 玖壹壹 演出</h3><p>重點時段！結束後人潮一起散場，可以先在草坪多待 15 分鐘再去牽車。</p><div class="tags"><span class="tag">玖壹壹</span><span class="tag">主秀</span></div><div class="btn-group"><a class="btn btn-ig" href="https://www.instagram.com/nine_one_one_official/" target="_blank" rel="noopener">📸 玖壹壹 IG ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">17:30–19:00</div>
+        <div><h3>🚗 開車前往溫泉區</h3><p>北投約 40 分、烏來約 60 分、礁溪約 70–90 分；途中可在便利商店補水、買隔天早餐。</p><div class="btn-group"><a class="btn" href="#spring">♨️ 看三區比較</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">19:00–19:30</div>
+        <div><h3>溫泉飯店 Check-in</h3><p>先放行李、確認泡湯時間與早餐時段（很多飯店大眾池 22:00 前結束）。</p><div class="tags"><span class="tag">訂房待定</span></div></div>
+      </article>
+      <article class="event">
+        <div class="time">19:30–21:00</div>
+        <div><h3>晚餐</h3><p>依區域：北投拉麵／陽明山土雞；烏來老街山產；礁溪甕窯雞或宜蘭小吃。</p></div>
+      </article>
+      <article class="event">
+        <div class="time">21:00–22:30</div>
+        <div><h3>♨️ 夜湯</h3><p>房內湯或大眾池；泡完補水、早點睡，隔天還有晨湯。</p><div class="tags"><span class="tag">溫泉</span></div></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="day" id="day2">
+    <div class="day-head">
+      <div class="date">DAY 02 · 10/25（日）</div>
+      <h2>晨湯・早餐・溫泉區景點・午餐・回程</h2>
+      <p>路線：晨湯 → 早餐 → 退房 → 溫泉區周邊景點 → 午餐 → 下午回家</p>
+    </div>
+    <div class="timeline">
+      <article class="event">
+        <div class="time">07:30–08:30</div>
+        <div><h3>♨️ 晨湯</h3><p>早上人少、山景最好，泡 20–30 分鐘就好。</p><div class="tags"><span class="tag">溫泉</span></div></div>
+      </article>
+      <article class="event">
+        <div class="time">08:30–09:30</div>
+        <div><h3>飯店早餐</h3><p>吃完收行李，11:00 前退房。</p></div>
+      </article>
+      <article class="event">
+        <div class="time">10:30–12:30</div>
+        <div><h3>溫泉區周邊景點</h3><p>北投：溫泉博物館、地熱谷、北投圖書館；烏來：老街、台車、瀑布；礁溪：湯圍溝公園泡腳、幾米公園、林美石磐步道。</p><div class="btn-group"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=北投溫泉博物館" target="_blank" rel="noopener">📍 北投 ↗</a><a class="btn" href="https://www.google.com/maps/search/?api=1&query=烏來老街" target="_blank" rel="noopener">📍 烏來 ↗</a><a class="btn" href="https://www.google.com/maps/search/?api=1&query=湯圍溝溫泉公園" target="_blank" rel="noopener">📍 礁溪 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">12:30–13:45</div>
+        <div><h3>午餐</h3><p>在地午餐後出發，避開週日下午回程車潮（礁溪走國5 建議 15:00 前上路）。</p></div>
+      </article>
+      <article class="event">
+        <div class="time">14:00 起</div>
+        <div><h3>🚗 回程</h3><p>順路點：北投→士林夜市；烏來→新店碧潭；礁溪→宜蘭市或礁溪伴手禮（奕順軒）。</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" id="checklist">
+    <h2>✅ 出發前清單</h2>
+    <div class="checklist">
+      <label><input type="checkbox">確認玖壹壹場次時間與入場方式（免費／索票）</label>
+      <label><input type="checkbox">決定溫泉區並訂好 10/24 住宿</label>
+      <label><input type="checkbox">野餐墊、帽子、防曬、水、行動電源</label>
+      <label><input type="checkbox">泳衣（大眾池需要）、毛巾、換洗衣物</label>
+      <label><input type="checkbox">加油、ETC 餘額、停車零錢</label>
+      <p class="small">勾選狀態僅保存在目前頁面；重新載入後可能會重設。</p>
+    </div>
+  </section>
+</main>
+
+<footer>玖壹壹演唱會＋溫泉 2 天 1 夜 · 2026/10/24–25 · <a href="index.html" style="color:#f1c59e">← 回行程總覽</a></footer>
+
+<button id="tonav" type="button" aria-label="回到分類選單">☰ 回到分類</button>
+<script>
+(function(){
+  var nav=document.getElementById('catnav'), btn=document.getElementById('tonav');
+  if(!nav||!btn) return;
+  function chk(){ btn.classList.toggle('show', nav.getBoundingClientRect().bottom < 0); }
+  window.addEventListener('scroll', chk, {passive:true}); chk();
+  btn.addEventListener('click', function(){ nav.scrollIntoView({behavior:'smooth', block:'start'}); });
+})();
+</script>
+</body>
+</html>
