@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#153c35">
+<title>基隆一日遊｜正濱漁港・基隆塔・廟口夜市｜11/8</title>
+<style>
+:root{
+  --green:#153c35; --green2:#245b4f; --cream:#f7f3eb; --paper:#fffdf8;
+  --orange:#e68b55; --ink:#24332f; --muted:#66736e; --line:#e5e0d6; --ig:#e1306c;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.65}
+a{color:var(--green2);text-underline-offset:3px}
+.hero{background:linear-gradient(125deg,rgba(15,49,43,.94),rgba(31,89,74,.83)),radial-gradient(circle at 80% 10%,#e6a36a,transparent 35%);color:white;padding:52px 22px 42px}
+.hero-inner,.container{max-width:1050px;margin:auto}
+.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:#f1c59e;font-weight:700}
+h1{font-size:clamp(2rem,5vw,3.8rem);line-height:1.13;margin:.55rem 0 1rem}
+.hero p{max-width:680px;color:#e9f0ec;margin:0}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.pill{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 12px;font-size:.9rem;background:rgba(255,255,255,.08)}
+.container{padding:24px 18px 60px}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:-1px}
+.quick{background:var(--paper);padding:17px;border:1px solid var(--line);border-radius:16px}
+.quick strong{display:block;color:var(--green);font-size:1.08rem}
+.quick span{font-size:.9rem;color:var(--muted)}
+.notice{margin:20px 0;padding:16px 18px;background:#fff2e7;border-left:4px solid var(--orange);border-radius:10px}
+.notice strong{display:block;margin-bottom:4px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+nav a{background:var(--green);color:white;text-decoration:none;padding:9px 14px;border-radius:999px;font-size:.92rem}
+h2{font-size:1.7rem;color:var(--green);margin:0 0 8px}
+.section-intro{color:var(--muted);margin:0 0 20px}
+.day{margin:30px 0;background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 6px 20px rgba(27,45,38,.04)}
+.day-head{padding:22px 24px;background:#e9eee8;border-bottom:1px solid var(--line)}
+.day-head .date{font-size:.82rem;color:var(--green2);font-weight:800;letter-spacing:.08em}
+.day-head h2{margin:4px 0}
+.day-head p{margin:0;color:var(--muted)}
+.timeline{padding:8px 24px 22px}
+.event{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.event:last-child{border-bottom:0}
+.time{font-weight:800;color:var(--green2);font-variant-numeric:tabular-nums}
+.event h3{margin:0 0 5px;font-size:1.08rem}
+.event p{margin:0;color:#4d5a55}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.tag{font-size:.78rem;padding:3px 9px;background:#edf2ed;color:var(--green2);border-radius:999px}
+.btn-group{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.btn{display:inline-block;padding:6px 12px;background:var(--green);color:white;text-decoration:none;border-radius:8px;font-size:.85rem;font-weight:500}
+.btn-ig{background:var(--ig)}
+.columns{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:18px}
+.panel h2{font-size:1.35rem}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{text-align:left;padding:11px 8px;border-bottom:1px solid var(--line)}
+th{color:var(--green);font-size:.9rem}
+td:last-child,th:last-child{text-align:right;white-space:nowrap}
+.total td{font-weight:800;color:var(--green);border-bottom:0}
+.checklist label{display:flex;gap:10px;align-items:flex-start;margin:10px 0}
+input[type=checkbox]{margin-top:6px;accent-color:var(--green);width:17px;height:17px;flex-shrink:0}
+.small{font-size:.88rem;color:var(--muted)}
+footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed;font-size:.9rem}
+@media(max-width:700px){
+ .quick-grid{grid-template-columns:1fr}
+ .event{grid-template-columns:1fr;gap:3px;padding:15px 0}
+ .columns{grid-template-columns:1fr}
+ .timeline{padding:6px 18px 16px}
+ .day-head{padding:20px 18px}
+ .hero{padding-top:38px}
+}
+@media print{
+ body{background:white}.hero{padding:24px;background:#153c35!important;print-color-adjust:exact}
+ nav,.btn{display:none}.day,.panel,.quick{break-inside:avoid;box-shadow:none}
+ .container{max-width:none;padding:10px}
+}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:14px}
+.fcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(27,45,38,.04)}
+.fcard .img{height:118px;display:flex;align-items:center;justify-content:center;font-size:2.9rem;position:relative;overflow:hidden}
+.fcard .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fcard .bd{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
+.fcard .nm{font-weight:800;color:var(--green);font-size:1.02rem}
+.fcard .ds{font-size:.85rem;color:var(--muted);margin:4px 0 11px;flex:1}
+.fcard .links{display:flex;gap:8px;flex-wrap:wrap}
+.fcard .links a{white-space:nowrap}
+#tonav{position:fixed;right:16px;bottom:18px;z-index:99;display:none;align-items:center;gap:6px;background:var(--green);color:#fff;border:0;border-radius:999px;padding:11px 16px;font-size:.9rem;font-weight:700;box-shadow:0 8px 22px rgba(0,0,0,.25);cursor:pointer;font-family:inherit}
+#tonav.show{display:flex}
+#tonav:hover{background:var(--green2)}
+.fcard .links a{font-size:.8rem;font-weight:700;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid var(--line)}
+.fcard .links .ig{background:#fdeef4;color:#c13584;border-color:#f3cfe0}
+.fcard .credit{font-size:.68rem;color:#9aa39e;margin-top:6px}
+.fcard .links .mp{background:#eaf1ee;color:var(--green2)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">TAIWAN · KEELUNG DAY TRIP</div>
+    <h1>基隆一日遊<br>正濱漁港 → 基隆塔 → 廟口</h1>
+    <p>11/8（日）從中壢出發、新莊接人，先到正濱漁港拍彩虹屋、熱狗堡公車亭、阿根納造船廠；下午進市區走信二防空洞（搭電梯到最底層）、登基隆塔看港景到夜景，最後走路到廟口夜市吃晚餐。</p>
+    <div class="meta">
+      <span class="pill">📅 2026/11/8（日）</span>
+      <span class="pill">🚗 自駕</span>
+      <span class="pill">📸 正濱漁港 × 3</span>
+      <span class="pill">🗼 基隆塔・信二防空洞</span>
+      <span class="pill">🍢 廟口夜市</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="quick-grid" aria-label="行程摘要">
+    <div class="quick"><strong>上午 出發・接人</strong><span>中壢亞運保齡球館 → 新莊幸福路大樹藥局接人 → 國1 到基隆</span></div>
+    <div class="quick"><strong>中午～下午 正濱漁港</strong><span>午餐、彩虹屋、熱狗堡公車亭、阿根納造船廠（三點走路相連）</span></div>
+    <div class="quick"><strong>傍晚～晚上 市區</strong><span>信二防空洞 → 電梯上扇形廣場 → 基隆塔看日落夜景 → 走路到廟口夜市</span></div>
+  </section>
+
+  <div class="notice">
+    <strong>⏰ 兩個時間限制</strong>
+    1）<strong>信二防空洞 17:00 關</strong>，一定要 16:00 前進去。2）11/8 基隆日落約 17:05，基隆塔開到 21:00——防空洞出來剛好接基隆塔看日落轉夜景。
+  </div>
+
+  <nav id="catnav" aria-label="分類與行程">
+    <a href="#spots">📸 景點</a>
+    <a href="#parking">🅿️ 停車</a>
+    <a href="#food">🍢 吃什麼</a>
+    <a href="#day1">🗓️ 11/8 行程</a>
+    <a href="#checklist">出發前清單</a>
+  </nav>
+
+  <section id="spots" style="margin-top:34px">
+    <h2>📸 景點</h2>
+    <p class="section-intro">正濱漁港三個點彼此走路 3–5 分；基隆塔、防空洞、廟口也是走路相連，車停一次就好。</p>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#e08aa0,#b65574)"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Zhengbin%20Fishing%20Port%20%E6%AD%A3%E6%BF%B1%E6%BC%81%E6%B8%AF.jpg?width=700" alt="正濱漁港彩虹屋" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">正濱漁港彩虹屋</div><div class="ds">整排彩色屋要從對岸拍：和平橋旁、正濱路的觀景平台，水面倒影入鏡最好看；中午到下午順光。彩虹屋那側有幾間咖啡店可坐。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=正濱漁港彩虹屋">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/正濱漁港/">📷 IG #</a></div>
+          <div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#e68b55,#c4612f)">🌭🚏</div>
+        <div class="bd"><div class="nm">熱狗堡公車亭（和平橋頭站）</div><div class="ds">基隆市府與台畜合作，把正濱路和平橋頭的老站牌改成美式熱狗鋪造型，有候車座位和「點餐櫃檯」，背板畫著小豬、吉古拉等基隆元素。就在彩虹屋與阿根納之間，順路拍。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=和平橋頭+公車站+基隆+正濱路">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/熱狗堡公車亭/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://supertaste.tvbs.com.tw/travel/348598">📖 介紹</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#4a4a4a,#222)"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E9%98%BF%E6%A0%B9%E7%B4%8D%E9%80%A0%E8%88%B9%E5%BB%A0%E9%81%BA%E6%A7%8B.jpg?width=700" alt="阿根納造船廠" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">阿根納造船廠遺址</div><div class="ds">走過和平橋就到，日治礦石裝卸場改造船廠的水泥骨架廢墟。<strong>有圍籬、禁止進入</strong>，從橋上與正濱路側拍；廣角或長焦都好用。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=阿根納造船廠">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/阿根納造船廠/">📷 IG #</a></div>
+          <div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#6c7a89,#36414c)">🕳️🛗</div>
+        <div class="bd"><div class="nm">信二防空洞</div><div class="ds">信二路 284-1 號，信二立體停車場旁、義美自助火鍋城對面。二戰時期的指揮所坑道，洞內有電梯直通中正公園扇形廣場——<strong>先搭到最底層逛坑道，再搭上去接基隆塔</strong>。09:00–17:00，免費。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=信二防空洞">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/信二防空洞/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://woment.com.tw/44464/keelung-xin-2nd-road-air-raid-shelter/">📖 介紹</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#e68b55,#b84a1f)"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Keelung%20Tower%2020240116%2001.jpg?width=700" alt="基隆塔" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">基隆塔</div><div class="ds">義二路 128 號，橋式起重機造型的橘色鋼構塔，電梯上 64 m 高、87 m 長的天空廊道，山海港城一次看；4F「鳶 Milvus」景觀書店、頂樓「崆書屋」。09:00–21:00，免費，每月最後一個週一休。2026/8/22 整修後重新開放。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆塔">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/基隆塔/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://woment.com.tw/28944/keelung-tower/">📖 介紹</a></div>
+          <div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#c0392b,#7b1d12)"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Keelung%20Miaokou%20Night%20Market%20Entrance%2020240215.jpg?width=700" alt="基隆廟口夜市" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+        <div class="bd"><div class="nm">基隆廟口夜市</div><div class="ds">基隆塔搭電梯回義二路，走約 600 m 就到。奠濟宮周邊百年小吃：天婦羅、鼎邊銼、營養三明治、奶油螃蟹、泡泡冰。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆廟口夜市">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/基隆廟口/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://woment.com.tw/32724/keelung-miaokou-night-market/">📖 必吃 7 攤</a></div>
+          <div class="credit">圖：Wikimedia Commons</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="parking" style="margin-top:34px">
+    <h2>🅿️ 停車場比較（基隆塔・信二防空洞・廟口）</h2>
+    <p class="section-intro">11/8 是週日：<strong>基隆路邊白線停車格週六、日、國定假日免費</strong>（平日 20 元/時，09:00–17:00 收費）。收費停車場幾乎都是 30 元/時、前 15 分免費；下面標 ✗ 的假日漲價，別停。資料為 2026 年 4–7 月整理，以現場牌面為準。</p>
+    <div class="panel" style="margin:0 0 14px;padding:18px 20px">
+      <table>
+        <tr><th>停車場</th><th>費率</th><th>走到防空洞／基隆塔／廟口</th><th>備註</th></tr>
+        <tr><td><strong>✅ 首選：路邊白線車格</strong><br><span class="small">信二路、義一路、中正公園壽山路</span></td><td><strong>週日免費</strong></td><td>看停哪</td><td>紅黃線不行；基隆塔旁義一路、中正公園上壽山路（主普壇附近）常有位，停上面就先逛基隆塔、再搭防空洞電梯下去。</td></tr>
+        <tr><td><strong>信二立體停車場</strong><br><span class="small">信二路 299 號，512 格，24h</span></td><td>30 元/時<br><span class="small">15 元/半小時，無當日上限</span></td><td>1 分／8 分／7 分</td><td>行程預設。停 4.5 小時約 135–150 元。曾有網友回報假日牌面 100 元/時（2023），進場前看一眼費率牌。</td></tr>
+        <tr><td><strong>基隆醫院停車場</strong><br><span class="small">信二路 268 號</span></td><td>30 元/時</td><td>1 分／8 分／8 分</td><td>就在防空洞對面，但車位很少，有位就停。</td></tr>
+        <tr><td><strong>基隆義一路停車場</strong><br><span class="small">義一路 177 號，室外</span></td><td>30 元/時</td><td>5 分／3 分／8 分</td><td>離基隆塔最近的收費場，車位中等。</td></tr>
+        <tr><td><strong>基隆東岸停車場（E-Square）</strong><br><span class="small">仁二路 236 號 B1–B4，24h</span></td><td>30 元/時<br><span class="small">前 15 分免費</span></td><td>6 分／5 分／5 分</td><td>車位最多（微風東岸商場下），找不到位就來這；也最靠近廟口。</td></tr>
+        <tr><td><strong>信義國小地下停車場</strong><br><span class="small">仁二路 135 號</span></td><td>30 元/時</td><td>8 分／8 分／10 分</td><td>備案，車位較少。</td></tr>
+        <tr><td><strong>博愛地下停車場</strong><br><span class="small">愛三路 11 號</span></td><td>30 元/時</td><td>10 分／8 分／1 分</td><td>廟口正旁邊；適合晚餐時段，但離防空洞最遠。</td></tr>
+        <tr><td>✗ Times 義三 / 義四路 / 東岸遊客中心</td><td>假日 50 元/時</td><td>10–12 分</td><td>假日漲價，不建議。</td></tr>
+        <tr><td>✗ 皇冠大樓地下（信一路 177）</td><td>80 元/時</td><td>5 分</td><td>貴。</td></tr>
+        <tr><td>✗ ViVi Park 廟口（仁三路 11 號 B3）</td><td>假日 100 元/時</td><td>廟口 1 分</td><td>最貴，不要停。</td></tr>
+      </table>
+      <p class="small" style="margin:12px 0 0">即時剩餘車位：<a href="https://e-traffic.klcg.gov.tw/KeelungTraffic/pages/park.jsp" target="_blank" rel="noopener">基隆停車場剩餘車位查詢（市府）↗</a>｜路邊停車費率：<a href="https://park.klcg.gov.tw/" target="_blank" rel="noopener">基隆停管中心 ↗</a></p>
+    </div>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#6b8f78,#3f6150)">🅿️🆓</div>
+        <div class="bd"><div class="nm">路邊白線（週日免費）</div><div class="ds">義一路、信二路、中正公園壽山路。停壽山路就先逛基隆塔→防空洞，晚上從義二路搭基隆塔電梯回上面取車。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆市中正區壽山路+主普壇">📍 壽山路</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆市中正區義一路">📍 義一路</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#2c3e50,#1a252f)">🅿️🏢</div>
+        <div class="bd"><div class="nm">信二立體停車場（預設）</div><div class="ds">30 元/時、無上限、512 格；防空洞走 1 分。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=信二立體停車場+基隆">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://parkboss.tw/parking-space/kee-kee11101">🔎 剩餘車位</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#3f5a8a,#1f2f4d)">🅿️🛍️</div>
+        <div class="bd"><div class="nm">基隆東岸停車場 E-Square（備案 1）</div><div class="ds">30 元/時、前 15 分免費、車位最多；廟口 5 分、防空洞 6 分。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆東岸停車場+仁二路236號">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://parkboss.tw/parking-space/kee-kee11305">🔎 剩餘車位</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#9c8368,#6e5942)">🅿️🗼</div>
+        <div class="bd"><div class="nm">基隆義一路停車場（備案 2）</div><div class="ds">30 元/時、室外；離基隆塔 3 分最近，防空洞 5 分。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆義一路停車場+義一路177號">📍 Maps</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="food" style="margin-top:34px">
+    <h2>🍢 吃什麼</h2>
+    <p class="section-intro">中午在正濱漁港解決，晚餐廟口夜市。</p>
+    <div class="fgrid">
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#d6a657,#b07f2c)">🍢☕</div>
+        <div class="bd"><div class="nm">正濱漁港周邊（午餐）</div><div class="ds">彩虹屋那側有咖啡店、手工魚丸、炭烤吉古拉；想吃正餐可到和平島邊的海產店。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=正濱漁港+美食">📍 Maps</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#c0392b,#7b1d12)">🦀🍤</div>
+        <div class="bd"><div class="nm">廟口夜市必吃（晚餐）</div><div class="ds">天婦羅（16 號）、鼎邊銼、營養三明治（58 號）、吳記螃蟹羹、奶油螃蟹、泡泡冰；週日人多，分頭排隊比較快。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆廟口夜市">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://woment.com.tw/32724/keelung-miaokou-night-market/">📖 介紹</a></div></div>
+      </div>
+      <div class="fcard">
+        <div class="img" style="background:linear-gradient(135deg,#9c8368,#6e5942)">📚☕</div>
+        <div class="bd"><div class="nm">鳶 Milvus 2.0（基隆塔 4F）</div><div class="ds">基隆塔裡的景觀書店＋咖啡，落地窗看基隆港；等日落的時候可以坐這裡。</div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆塔">📍 Maps</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 1 -->
+  <section class="day" id="day1">
+    <div class="day-head">
+      <div class="date">11/8（日）</div>
+      <h2>中壢出發・新莊接人・正濱漁港三連拍・信二防空洞・基隆塔夜景・廟口夜市</h2>
+      <p>路線：中壢亞運保齡球館 → 新莊幸福路大樹藥局接人 → 國1 → 正濱漁港（午餐、彩虹屋、熱狗堡公車亭、阿根納）→ 信二立體停車場 → 信二防空洞 → 電梯上扇形廣場 → 基隆塔 → 主普壇 → 廟口夜市 → 走回停車場回程</p>
+    </div>
+    <div class="timeline">
+      <article class="event">
+        <div class="time">10:00</div>
+        <div><h3>🚗 中壢亞運保齡球館 出發</h3><p>桃園市中壢區華美一路 100 號。走國1 北上到新莊約 40–45 分（週日早上較順）。</p><div class="btn-group"><a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=中壢亞運保齡球館&destination=大樹連鎖藥局-新莊幸福店" target="_blank" rel="noopener">🚗 導航到大樹藥局 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">10:45–10:55</div>
+        <div><h3>🤝 新莊幸福路 大樹藥局 接人</h3><p>大樹連鎖藥局-新莊幸福店：新北市新莊區幸福路 672 號。路邊暫停接人，別停太久。</p><div class="btn-group"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=大樹連鎖藥局-新莊幸福店+幸福路672號" target="_blank" rel="noopener">📍 大樹藥局 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">10:55–11:50</div>
+        <div><h3>🚗 新莊 → 基隆正濱漁港</h3><p>國1 → 基隆端 → 中正路 → 正濱路，約 50 分。停車：正濱路路邊白線（週日免費）；或正濱漁港停車場（中正路 393 號 1 巷，計次）、基隆和一停車場（和一路 42 號，30 元/時，車位多，走 5 分）。</p><div class="btn-group"><a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=大樹連鎖藥局-新莊幸福店&destination=正濱漁港彩虹屋" target="_blank" rel="noopener">🚗 導航到正濱漁港 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">12:00–12:50</div>
+        <div><h3>午餐：正濱漁港周邊</h3><p>彩虹屋側咖啡店／手工魚丸／炭烤吉古拉，或和平島邊海產店。</p><div class="btn-group"><a class="btn" href="#food">🍢 看吃什麼</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">12:50–13:30</div>
+        <div><h3>📸 正濱漁港彩虹屋</h3><p>從和平橋旁與正濱路觀景點往對岸拍整排彩色屋＋倒影，這時段順光。</p><div class="tags"><span class="tag">拍照</span></div><div class="btn-group"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=正濱漁港彩虹屋" target="_blank" rel="noopener">📍 彩虹屋 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">13:30–13:50</div>
+        <div><h3>📸 熱狗堡公車亭（和平橋頭站）</h3><p>彩虹屋走過去 3 分，美式熱狗鋪造型站牌，坐在候車椅上拍、站「點餐櫃檯」拍都可以。</p><div class="tags"><span class="tag">拍照</span></div><div class="btn-group"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=和平橋頭+公車站+基隆+正濱路" target="_blank" rel="noopener">📍 公車亭 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">13:50–14:30</div>
+        <div><h3>📸 阿根納造船廠遺址</h3><p>走過和平橋就到，水泥骨架廢墟；有圍籬禁止進入，在外圍與橋上拍。</p><div class="tags"><span class="tag">拍照</span><span class="tag">勿進入</span></div><div class="btn-group"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=阿根納造船廠" target="_blank" rel="noopener">📍 阿根納 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">14:40–15:00</div>
+        <div><h3>🚗 正濱漁港 → 信二立體停車場</h3><p>中正路進市區約 10–15 分。先找義一路／信二路路邊白線（週日免費），沒有再停信二立體停車場（30 元/時，防空洞旁）；滿了改東岸停車場。之後基隆塔、廟口都走路，車不用再動。</p><div class="btn-group"><a class="btn" href="#parking">🅿️ 停車場比較</a></div><div class="btn-group"><a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=正濱漁港彩虹屋&destination=信二立體停車場" target="_blank" rel="noopener">🚗 導航到信二停車場 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">15:00–15:50</div>
+        <div><h3>🕳️ 信二防空洞（搭電梯到最底層）</h3><p>信二路 284-1 號。進洞後<strong>先搭電梯到最底層</strong>逛二戰指揮所坑道、岩壁；逛完再搭電梯上到中正公園扇形廣場。<strong>17:00 關門</strong>，16:00 前一定要進去。免費。</p><div class="tags"><span class="tag">免費</span><span class="tag">09:00–17:00</span></div><div class="btn-group"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=信二防空洞" target="_blank" rel="noopener">📍 信二防空洞 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">15:50–16:10</div>
+        <div><h3>🚶 扇形廣場 → 步行至基隆塔</h3><p>電梯出來是中正公園扇形廣場，沿步道往上走到主普壇旁的基隆塔，約 10–15 分，沿途有公廁。</p></div>
+      </article>
+      <article class="event">
+        <div class="time">16:10–17:40</div>
+        <div><h3>🗼 基隆塔：天空廊道 → 日落 → 夜景</h3><p>先走 87 m 天空廊道看白天港景，到 4F「鳶 Milvus」書店坐著等；11/8 日落約 17:05，天黑後碼頭與市區亮燈，再回廊道拍夜景。免費，開到 21:00。</p><div class="tags"><span class="tag">日落 17:05</span><span class="tag">免費</span></div><div class="btn-group"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=基隆塔" target="_blank" rel="noopener">📍 基隆塔 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">17:40–18:00</div>
+        <div><h3>🚶 主普壇 → 廟口夜市</h3><p>天空廊道另一端是主普壇，從這裡回拍整座橘色塔；之後搭基隆塔電梯下到義二路，沿義二路走約 600 m（10 分）到廟口。</p></div>
+      </article>
+      <article class="event">
+        <div class="time">18:00–19:30</div>
+        <div><h3>🍢 晚餐：基隆廟口夜市</h3><p>天婦羅、鼎邊銼、營養三明治、螃蟹羹、奶油螃蟹、泡泡冰；週日人多，分頭排隊。</p><div class="btn-group"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=基隆廟口夜市" target="_blank" rel="noopener">📍 廟口夜市 ↗</a><a class="btn" href="https://woment.com.tw/32724/keelung-miaokou-night-market/" target="_blank" rel="noopener">📖 必吃 7 攤 ↗</a></div></div>
+      </article>
+      <article class="event">
+        <div class="time">19:30 起</div>
+        <div><h3>🚗 走回信二立體停車場 → 回程</h3><p>廟口走回停車場約 10–12 分。基隆上國1 回新莊約 50 分、回中壢再約 45 分；週日晚上 20:00 後國1 基隆段較順。</p><div class="btn-group"><a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=信二立體停車場&destination=大樹連鎖藥局-新莊幸福店" target="_blank" rel="noopener">🚗 回新莊 ↗</a></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" id="checklist">
+    <h2>✅ 出發前清單</h2>
+    <div class="checklist">
+      <label><input type="checkbox">確認信二防空洞、基隆塔當天開放（每月最後一個週一休館；11/8 是週日 OK）</label>
+      <label><input type="checkbox">相機／手機電量、行動電源（彩虹屋、阿根納、基隆塔夜景都很耗電）</label>
+      <label><input type="checkbox">防曬、外套（基隆塔天空廊道風大、11 月晚上涼）</label>
+      <label><input type="checkbox">零錢／悠遊卡（廟口夜市多數攤位現金）</label>
+      <label><input type="checkbox">加油、ETC 餘額、停車費（週日路邊白線免費，先找路邊）</label>
+      <p class="small">勾選狀態僅保存在目前頁面；重新載入後可能會重設。</p>
+    </div>
+  </section>
+</main>
+
+<footer>基隆一日遊 · 2026/11/8 · <a href="index.html" style="color:#f1c59e">← 回行程總覽</a></footer>
+
+<button id="tonav" type="button" aria-label="回到分類選單">☰ 回到分類</button>
+<script>
+(function(){
+  var nav=document.getElementById('catnav'), btn=document.getElementById('tonav');
+  if(!nav||!btn) return;
+  function chk(){ btn.classList.toggle('show', nav.getBoundingClientRect().bottom < 0); }
+  window.addEventListener('scroll', chk, {passive:true}); chk();
+  btn.addEventListener('click', function(){ nav.scrollIntoView({behavior:'smooth', block:'start'}); });
+})();
+</script>
+</body>
+</html>
