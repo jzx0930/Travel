@@ -89,6 +89,22 @@ footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed
 .fcard .links .ig{background:#fdeef4;color:#c13584;border-color:#f3cfe0}
 .fcard .credit{font-size:.68rem;color:#9aa39e;margin-top:6px}
 .fcard .links .mp{background:#eaf1ee;color:var(--green2)}
+.ptwrap{overflow-x:auto;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:6px 10px}
+.ptable{width:100%;min-width:760px;border-collapse:collapse;table-layout:fixed}
+.ptable th,.ptable td{text-align:left;vertical-align:top;padding:11px 10px;border-bottom:1px solid var(--line);white-space:normal;font-size:.9rem}
+.ptable th{color:var(--green);font-size:.85rem;background:#f1f4f0}
+.ptable th:nth-child(1){width:24%}.ptable th:nth-child(2){width:13%}.ptable th:nth-child(3){width:17%}.ptable th:nth-child(4){width:30%}.ptable th:nth-child(5){width:16%}
+.ptable td:last-child,.ptable th:last-child{text-align:left;white-space:normal}
+.ptable tr:last-child td{border-bottom:0}
+.ptable .nm{font-weight:800;color:var(--green)}
+.ptable .ad{font-size:.78rem;color:var(--muted);margin-top:2px}
+.ptable .fee{font-weight:800;white-space:nowrap}
+.ptable .fee.free{color:#1e7d4f}
+.ptable .fee.bad{color:#b03030}
+.ptable .note{color:var(--muted);font-size:.85rem}
+.ptable .act .btn{display:inline-block;margin:0 4px 4px 0;padding:5px 9px;font-size:.8rem;white-space:nowrap}
+.ptable tr.pick td{background:#f1f8f3}
+.ptable tr.grp td{background:#e9eee8;color:var(--green);font-weight:800;padding:8px 10px}
 </style>
 </head>
 <body>
@@ -116,7 +132,7 @@ footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed
 
   <div class="notice">
     <strong>⏰ 兩個時間限制</strong>
-    1）<strong>信二防空洞 17:00 關</strong>，一定要 16:00 前進去。2）11/8 基隆日落約 17:05，基隆塔開到 21:00——防空洞出來剛好接基隆塔看日落轉夜景。
+    1）<b>信二防空洞 17:00 關</b>，一定要 16:00 前進去。2）11/8 基隆日落約 17:05，基隆塔開到 21:00——防空洞出來剛好接基隆塔看日落轉夜景。
   </div>
 
   <nav id="catnav" aria-label="分類與行程">
@@ -138,9 +154,10 @@ footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed
           <div class="credit">圖：Wikimedia Commons</div></div>
       </div>
       <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#e68b55,#c4612f)">🌭🚏</div>
+        <div class="img" style="background:linear-gradient(135deg,#e68b55,#c4612f)">🌭🚏<img src="images/hotdog_busstop.jpg" alt="熱狗堡公車亭" loading="lazy" onerror="this.remove()"></div>
         <div class="bd"><div class="nm">熱狗堡公車亭（和平橋頭站）</div><div class="ds">基隆市府與台畜合作，把正濱路和平橋頭的老站牌改成美式熱狗鋪造型，有候車座位和「點餐櫃檯」，背板畫著小豬、吉古拉等基隆元素。就在彩虹屋與阿根納之間，順路拍。</div>
-          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=和平橋頭+公車站+基隆+正濱路">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/熱狗堡公車亭/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://supertaste.tvbs.com.tw/travel/348598">📖 介紹</a></div></div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=和平橋頭+公車站+基隆+正濱路">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/熱狗堡公車亭/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://supertaste.tvbs.com.tw/travel/348598">📖 介紹</a></div>
+          <div class="credit">圖：IG 網友貼文</div></div>
       </div>
       <div class="fcard">
         <div class="img" style="background:linear-gradient(135deg,#4a4a4a,#222)"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E9%98%BF%E6%A0%B9%E7%B4%8D%E9%80%A0%E8%88%B9%E5%BB%A0%E9%81%BA%E6%A7%8B.jpg?width=700" alt="阿根納造船廠" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
@@ -149,9 +166,10 @@ footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed
           <div class="credit">圖：Wikimedia Commons</div></div>
       </div>
       <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#6c7a89,#36414c)">🕳️🛗</div>
+        <div class="img" style="background:linear-gradient(135deg,#6c7a89,#36414c)">🕳️🛗<img src="images/xin2_shelter.jpg" alt="信二防空洞" loading="lazy" onerror="this.remove()"></div>
         <div class="bd"><div class="nm">信二防空洞</div><div class="ds">信二路 284-1 號，信二立體停車場旁、義美自助火鍋城對面。二戰時期的指揮所坑道，洞內有電梯直通中正公園扇形廣場——<strong>先搭到最底層逛坑道，再搭上去接基隆塔</strong>。09:00–17:00，免費。</div>
-          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=信二防空洞">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/信二防空洞/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://woment.com.tw/44464/keelung-xin-2nd-road-air-raid-shelter/">📖 介紹</a></div></div>
+          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=信二防空洞">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/信二防空洞/">📷 IG #</a><a class="ig" target="_blank" rel="noopener" href="https://woment.com.tw/44464/keelung-xin-2nd-road-air-raid-shelter/">📖 介紹</a></div>
+          <div class="credit">圖：IG 網友貼文</div></div>
       </div>
       <div class="fcard">
         <div class="img" style="background:linear-gradient(135deg,#e68b55,#b84a1f)"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Keelung%20Tower%2020240116%2001.jpg?width=700" alt="基隆塔" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
@@ -169,57 +187,34 @@ footer{text-align:center;padding:28px 18px;background:var(--green);color:#eaf1ed
   </section>
 
   <section id="parking" style="margin-top:34px">
-    <h2>🅿️ 停車（正濱漁港・基隆塔・信二防空洞・廟口）</h2>
-    <p class="section-intro">11/8 是週日：<strong>基隆路邊白線停車格週六、日、國定假日免費</strong>（平日 20 元/時，09:00–17:00 收費）。收費停車場幾乎都是 30 元/時、前 15 分免費；下面標 ✗ 的假日漲價，別停。資料為 2026 年 4–7 月整理，以現場牌面為準。</p>
-    <div class="panel" style="margin:0 0 14px;padding:18px 20px">
-      <table>
-        <tr><th>停車場</th><th>費率</th><th>步行距離</th><th>備註</th></tr>
-        <tr><td colspan="4" style="background:#e9eee8;font-weight:800;color:var(--green)">正濱漁港（中午）</td></tr>
-        <tr><td><strong>✅ 基隆原住民祭典廣場</strong><br><span class="small">正濱路 116 巷 5 弄</span><br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=基隆原住民祭典廣場" target="_blank" rel="noopener">📍 地圖 ↗</a></td><td>依現場</td><td>彩虹屋 3 分／公車亭 5 分／阿根納 8 分</td><td>你指定的停車點。</td></tr>
-        <tr><td>正濱路路邊白線<br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=基隆市中正區正濱路" target="_blank" rel="noopener">📍 正濱路 ↗</a></td><td><strong>週日免費</strong></td><td>就在彩虹屋對岸</td><td>紅黃線不行。</td></tr>
-        <tr><td>正濱漁港停車場<br><span class="small">中正路 393 號 1 巷（漁會後方）</span><br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=正濱漁港停車場+中正路393號" target="_blank" rel="noopener">📍 地圖 ↗</a></td><td>計次</td><td>彩虹屋 3 分</td><td>備案。</td></tr>
-        <tr><td>基隆和一停車場<br><span class="small">和一路 42 號</span><br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=基隆和一停車場+和一路42號" target="_blank" rel="noopener">📍 地圖 ↗</a></td><td>30 元/時</td><td>彩虹屋 5 分</td><td>車位多（約 250 格）。</td></tr>
-        <tr><td colspan="4" style="background:#e9eee8;font-weight:800;color:var(--green)">市區（基隆塔・信二防空洞・廟口）— 走到 防空洞／基隆塔／廟口</td></tr>
-        <tr><td><strong>✅ 首選：路邊白線車格</strong><br><span class="small">信二路、義一路、中正公園壽山路</span><br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=基隆市中正區義一路" target="_blank" rel="noopener">📍 義一路 ↗</a> <br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=基隆市中正區壽山路+主普壇" target="_blank" rel="noopener">📍 壽山路 ↗</a></td><td><strong>週日免費</strong></td><td>看停哪</td><td>紅黃線不行；基隆塔旁義一路、中正公園上壽山路（主普壇附近）常有位，停上面就先逛基隆塔、再搭防空洞電梯下去。</td></tr>
-        <tr><td><strong>信二立體停車場</strong><br><span class="small">信二路 299 號，512 格，24h</span><br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=信二立體停車場+基隆市中正區信二路299號" target="_blank" rel="noopener">📍 地圖 ↗</a></td><td>30 元/時<br><span class="small">15 元/半小時，無當日上限</span></td><td>1 分／8 分／7 分</td><td>行程預設。停 4.5 小時約 135–150 元。曾有網友回報假日牌面 100 元/時（2023），進場前看一眼費率牌。</td></tr>
-        <tr><td><strong>基隆醫院停車場</strong><br><span class="small">信二路 268 號</span><br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=基隆醫院停車場+信二路268號" target="_blank" rel="noopener">📍 地圖 ↗</a></td><td>30 元/時</td><td>1 分／8 分／8 分</td><td>就在防空洞對面，但車位很少，有位就停。</td></tr>
-        <tr><td><strong>基隆義一路停車場</strong><br><span class="small">義一路 177 號，室外</span><br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=基隆義一路停車場+義一路177號" target="_blank" rel="noopener">📍 地圖 ↗</a></td><td>30 元/時</td><td>5 分／3 分／8 分</td><td>離基隆塔最近的收費場，車位中等。</td></tr>
-        <tr><td><strong>基隆東岸停車場（E-Square）</strong><br><span class="small">仁二路 236 號 B1–B4，24h</span><br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=基隆東岸停車場+仁二路236號" target="_blank" rel="noopener">📍 地圖 ↗</a></td><td>30 元/時<br><span class="small">前 15 分免費</span></td><td>6 分／5 分／5 分</td><td>車位最多（微風東岸商場下），找不到位就來這；也最靠近廟口。</td></tr>
-        <tr><td><strong>信義國小地下停車場</strong><br><span class="small">仁二路 135 號</span><br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=信義國小地下停車場+基隆+仁二路135號" target="_blank" rel="noopener">📍 地圖 ↗</a></td><td>30 元/時</td><td>8 分／8 分／10 分</td><td>備案，車位較少。</td></tr>
-        <tr><td><strong>博愛地下停車場</strong><br><span class="small">愛三路 11 號</span><br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=博愛地下停車場+基隆+愛三路11號" target="_blank" rel="noopener">📍 地圖 ↗</a></td><td>30 元/時</td><td>10 分／8 分／1 分</td><td>廟口正旁邊；適合晚餐時段，但離防空洞最遠。</td></tr>
-        <tr><td>✗ Times 義三 / 義四路 / 東岸遊客中心<br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=Times+義三停車場+基隆" target="_blank" rel="noopener">📍 義三 ↗</a> <br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=義四路停車場+基隆+義四路25號" target="_blank" rel="noopener">📍 義四路 ↗</a> <br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=東岸遊客中心停車場+基隆+中正路3號" target="_blank" rel="noopener">📍 遊客中心 ↗</a></td><td>假日 50 元/時</td><td>10–12 分</td><td>假日漲價，不建議。</td></tr>
-        <tr><td>✗ 皇冠大樓地下（信一路 177）<br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=皇冠大樓地下停車場+基隆+信一路177號" target="_blank" rel="noopener">📍 地圖 ↗</a></td><td>80 元/時</td><td>5 分</td><td>貴。</td></tr>
-        <tr><td>✗ ViVi Park 廟口（仁三路 11 號 B3）<br><a class="btn" style="margin-top:6px;padding:4px 10px;font-size:.8rem" href="https://www.google.com/maps/search/?api=1&query=ViVi+Park+基隆廟口停車場+仁三路11號" target="_blank" rel="noopener">📍 地圖 ↗</a></td><td>假日 100 元/時</td><td>廟口 1 分</td><td>最貴，不要停。</td></tr>
+    <h2>🅿️ 停車場比較（正濱漁港・基隆塔・信二防空洞・廟口）</h2>
+    <p class="section-intro">11/8 是週日：<b>基隆路邊白線停車格週六、日、國定假日免費</b>（平日 20 元/時，09:00–17:00 收費）。收費停車場幾乎都是 30 元/時、前 15 分免費；標 ✗ 的假日漲價。資料為 2026 年 4–7 月整理，以現場牌面為準。</p>
+    <div class="ptwrap">
+      <table class="ptable">
+        <thead><tr><th>停車場</th><th>費率</th><th>步行</th><th>備註</th><th>地圖</th></tr></thead>
+        <tbody>
+        <tr class="grp"><td colspan="5">中午・正濱漁港</td></tr>
+        <tr class="pick"><td><div class="nm">✅ 基隆原住民祭典廣場</div><div class="ad">正濱路 116 巷 5 弄</div></td><td class="fee ">依現場</td><td>彩虹屋 3 分・公車亭 5 分・阿根納 8 分</td><td class="note">你指定的停車點。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=基隆原住民祭典廣場" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class=""><td><div class="nm">正濱路 路邊白線</div><div class="ad">彩虹屋對岸、正濱路沿線</div></td><td class="fee free">週日免費</td><td>彩虹屋 0–3 分</td><td class="note">白線才可以停，紅黃線不行。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=基隆市中正區正濱路" target="_blank" rel="noopener">📍 正濱路</a></td></tr>
+        <tr class=""><td><div class="nm">正濱漁港停車場</div><div class="ad">中正路 393 號 1 巷（漁會後方）</div></td><td class="fee ">計次</td><td>彩虹屋 3 分</td><td class="note">備案。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=正濱漁港停車場+中正路393號" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class=""><td><div class="nm">基隆和一停車場</div><div class="ad">和一路 42 號</div></td><td class="fee ">30 元/時</td><td>彩虹屋 5 分</td><td class="note">車位多（約 250 格）。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=基隆和一停車場+和一路42號" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class="grp"><td colspan="5">下午到晚上・市區（走到 防空洞／基隆塔／廟口）</td></tr>
+        <tr class="pick"><td><div class="nm">✅ 路邊白線車格</div><div class="ad">義一路、信二路、中正公園壽山路</div></td><td class="fee free">週日免費</td><td>看停哪</td><td class="note">基隆塔旁義一路、主普壇旁壽山路常有位；停壽山路就先逛基隆塔、再搭防空洞電梯下去。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=基隆市中正區義一路" target="_blank" rel="noopener">📍 義一路</a><a class="btn" href="https://www.google.com/maps/search/?api=1&query=基隆市中正區壽山路+主普壇" target="_blank" rel="noopener">📍 壽山路</a></td></tr>
+        <tr class=""><td><div class="nm">信二立體停車場（預設）</div><div class="ad">信二路 299 號・512 格・24h</div></td><td class="fee ">30 元/時</td><td>1 分／8 分／7 分</td><td class="note">15 元/半小時、無當日上限，停 4.5 小時約 135–150 元。有人回報過假日牌面 100 元/時（2023），進場前看一眼。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=信二立體停車場+基隆市中正區信二路299號" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class=""><td><div class="nm">基隆醫院停車場</div><div class="ad">信二路 268 號</div></td><td class="fee ">30 元/時</td><td>1 分／8 分／8 分</td><td class="note">防空洞正對面，但車位很少。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=基隆醫院停車場+信二路268號" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class=""><td><div class="nm">基隆義一路停車場</div><div class="ad">義一路 177 號・室外</div></td><td class="fee ">30 元/時</td><td>5 分／3 分／8 分</td><td class="note">離基隆塔最近的收費場。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=基隆義一路停車場+義一路177號" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class=""><td><div class="nm">基隆東岸停車場 E-Square</div><div class="ad">仁二路 236 號 B1–B4・24h</div></td><td class="fee ">30 元/時</td><td>6 分／5 分／5 分</td><td class="note">前 15 分免費；車位最多（微風東岸商場下），找不到位就來這。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=基隆東岸停車場+仁二路236號" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class=""><td><div class="nm">信義國小地下停車場</div><div class="ad">仁二路 135 號</div></td><td class="fee ">30 元/時</td><td>8 分／8 分／10 分</td><td class="note">備案，車位較少。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=信義國小地下停車場+基隆+仁二路135號" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class=""><td><div class="nm">博愛地下停車場</div><div class="ad">愛三路 11 號</div></td><td class="fee ">30 元/時</td><td>10 分／8 分／1 分</td><td class="note">廟口正旁邊；離防空洞最遠。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=博愛地下停車場+基隆+愛三路11號" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class=""><td><div class="nm">✗ Times 義三停車場</div><div class="ad">義三路 281 號旁</div></td><td class="fee bad">假日 50 元/時</td><td>廟口 10 分</td><td class="note">假日漲價，不建議。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Times+義三停車場+基隆" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class=""><td><div class="nm">✗ 義四路停車場</div><div class="ad">義四路 25 號</div></td><td class="fee bad">假日 50 元/時</td><td>廟口 12 分</td><td class="note">假日漲價，不建議。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=義四路停車場+基隆+義四路25號" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class=""><td><div class="nm">✗ 東岸遊客中心停車場</div><div class="ad">中正路 3 號</div></td><td class="fee bad">假日 50 元/時</td><td>廟口 10 分</td><td class="note">假日漲價，不建議。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=東岸遊客中心停車場+基隆+中正路3號" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class=""><td><div class="nm">✗ 皇冠大樓地下停車場</div><div class="ad">信一路 177 號</div></td><td class="fee bad">80 元/時</td><td>廟口 5 分</td><td class="note">貴。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=皇冠大樓地下停車場+基隆+信一路177號" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        <tr class=""><td><div class="nm">✗ ViVi Park 廟口停車場</div><div class="ad">仁三路 11 號 B3</div></td><td class="fee bad">假日 100 元/時</td><td>廟口 1 分</td><td class="note">最貴，不要停。</td><td class="act"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=ViVi+Park+基隆廟口停車場+仁三路11號" target="_blank" rel="noopener">📍 地圖</a></td></tr>
+        </tbody>
       </table>
-      <p class="small" style="margin:12px 0 0">即時剩餘車位：<a href="https://e-traffic.klcg.gov.tw/KeelungTraffic/pages/park.jsp" target="_blank" rel="noopener">基隆停車場剩餘車位查詢（市府）↗</a>｜路邊停車費率：<a href="https://park.klcg.gov.tw/" target="_blank" rel="noopener">基隆停管中心 ↗</a></p>
     </div>
-    <div class="fgrid">
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#e08aa0,#b65574)">🅿️🏳️‍🌈</div>
-        <div class="bd"><div class="nm">正濱漁港：基隆原住民祭典廣場 ✅</div><div class="ds">正濱路 116 巷 5 弄，彩虹屋走 3 分。你指定的停車點；滿了改正濱路路邊白線（週日免費）或和一停車場。</div>
-          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆原住民祭典廣場">📍 Maps</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=基隆原住民祭典廣場&destination=正濱漁港彩虹屋&travelmode=walking">🚶 走到彩虹屋</a></div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#6b8f78,#3f6150)">🅿️🆓</div>
-        <div class="bd"><div class="nm">路邊白線（週日免費）</div><div class="ds">義一路、信二路、中正公園壽山路。停壽山路就先逛基隆塔→防空洞，晚上從義二路搭基隆塔電梯回上面取車。</div>
-          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆市中正區壽山路+主普壇">📍 壽山路</a><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆市中正區義一路">📍 義一路</a></div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#2c3e50,#1a252f)">🅿️🏢</div>
-        <div class="bd"><div class="nm">信二立體停車場（預設）</div><div class="ds">30 元/時、無上限、512 格；防空洞走 1 分。</div>
-          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=信二立體停車場+基隆">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://parkboss.tw/parking-space/kee-kee11101">🔎 剩餘車位</a></div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#3f5a8a,#1f2f4d)">🅿️🛍️</div>
-        <div class="bd"><div class="nm">基隆東岸停車場 E-Square（備案 1）</div><div class="ds">30 元/時、前 15 分免費、車位最多；廟口 5 分、防空洞 6 分。</div>
-          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆東岸停車場+仁二路236號">📍 Maps</a><a class="ig" target="_blank" rel="noopener" href="https://parkboss.tw/parking-space/kee-kee11305">🔎 剩餘車位</a></div></div>
-      </div>
-      <div class="fcard">
-        <div class="img" style="background:linear-gradient(135deg,#9c8368,#6e5942)">🅿️🗼</div>
-        <div class="bd"><div class="nm">基隆義一路停車場（備案 2）</div><div class="ds">30 元/時、室外；離基隆塔 3 分最近，防空洞 5 分。</div>
-          <div class="links"><a class="mp" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=基隆義一路停車場+義一路177號">📍 Maps</a></div></div>
-      </div>
-    </div>
+    <p class="small" style="margin-top:12px">即時剩餘車位：<a href="https://e-traffic.klcg.gov.tw/KeelungTraffic/pages/park.jsp" target="_blank" rel="noopener">基隆停車場剩餘車位查詢（市府）↗</a>｜路邊停車費率：<a href="https://park.klcg.gov.tw/" target="_blank" rel="noopener">基隆停管中心 ↗</a></p>
   </section>
 
   <section id="food" style="margin-top:34px">
